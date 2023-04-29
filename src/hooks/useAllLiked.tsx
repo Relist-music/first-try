@@ -1,23 +1,21 @@
 import fetchArtists from '@/services/spotify/fetchArtists';
-import { getWaitedSpotify } from '@/services/spotify/fetchSpotify';
+import { getSpotify } from '@/services/spotify/getSpotify';
 import { GenreAggregateV1 } from '@/types/myTypes';
 import { PagingObject, SavedTrackObject } from '@/types/spotify-node-api';
-import { useState, useEffect } from 'react';
+import { useQuery } from '@tanstack/react-query';
 
 const useAllLiked = () => {
-  const [liked, setLiked] = useState<GenreAggregateV1[]>([]);
-
-  useEffect(() => {
-    const fetchAllLikedTracks = async () => {
+  const { data: liked, isLoading } = useQuery<GenreAggregateV1[]>(
+    ['likedTracks'],
+    async () => {
       let allLikedTracks = [] as any;
       let nextUrl = 'https://api.spotify.com/v1/me/tracks?offset=0&limit=50';
       while (nextUrl) {
-        const savedTrackData = await getWaitedSpotify<
-          PagingObject<SavedTrackObject>
-        >({
-          url: nextUrl,
-        });
-        console.log('savedTrackData', savedTrackData);
+        const savedTrackData = await getSpotify<PagingObject<SavedTrackObject>>(
+          {
+            url: nextUrl,
+          },
+        );
         const newData = (await Promise.all(
           savedTrackData.items.map(async (item) => {
             const { artists: fetchedArtists } = await fetchArtists({
@@ -44,21 +42,12 @@ const useAllLiked = () => {
           }),
         )) as GenreAggregateV1[];
         allLikedTracks = [...allLikedTracks, ...newData];
-        nextUrl = savedTrackData.next ? savedTrackData.next : '';
-        //nextUrl = '';
+        nextUrl = savedTrackData.next ?? '';
       }
-
-      setLiked(allLikedTracks);
-    };
-
-    fetchAllLikedTracks();
-  }, []);
-
-  // useEffect(() => {
-  //   console.log(liked);
-  // }, [liked]);
-
-  return [liked];
+      return allLikedTracks;
+    },
+  );
+  return { liked, isLoading };
 };
 
 export default useAllLiked;

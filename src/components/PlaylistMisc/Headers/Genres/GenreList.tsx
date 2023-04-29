@@ -7,6 +7,42 @@ import initialSpotifyGenres from '@/data/initial-spotify-genres-4600-with-color.
 import { GENRES_OBJECT_WITH_COUNT } from '@/types/myTypes';
 import { Switch } from '@headlessui/react';
 
+function groupGenres(
+  data: Record<string, number>,
+  subGenreData: SubGenreData,
+): Record<string, Genre> {
+  const groupedData: Record<string, Genre> = {};
+
+  for (const genre in data) {
+    const count = data[genre];
+    let umbrellaGenre = genre;
+
+    for (const subGenreKey in subGenreData) {
+      const subGenres = subGenreData[subGenreKey].subGenres;
+      const foundSubGenre = subGenres.find((sub) => sub.genre === genre);
+      if (foundSubGenre) {
+        umbrellaGenre = subGenreKey;
+        break;
+      }
+    }
+
+    if (!groupedData[umbrellaGenre]) {
+      groupedData[umbrellaGenre] = {
+        genre: umbrellaGenre,
+        count: 0,
+        color: subGenreData[umbrellaGenre]?.color || '',
+        size: subGenreData[umbrellaGenre]?.size || 0,
+        top: subGenreData[umbrellaGenre]?.top || 0,
+        left: subGenreData[umbrellaGenre]?.left || 0,
+      };
+    }
+
+    groupedData[umbrellaGenre].count += count;
+  }
+
+  return groupedData;
+}
+
 const GenreList = () => {
   // eslint-disable-next-line prettier/prettier
   const [umbrellaGenres, setUmbrellaGenres] = useState<GENRES_OBJECT_WITH_COUNT[]>([]);
@@ -48,9 +84,6 @@ const GenreList = () => {
     }
   }, [overall, useUmbrellaGenres]);
 
-  useEffect(() => {
-    console.log('overall', overall);
-  }, []);
   return (
     <div>
       <div>
@@ -157,41 +190,5 @@ interface SubGenre {
 }
 
 type SubGenreData = Record<string, SubGenre>;
-
-function groupGenres(
-  data: Record<string, number>,
-  subGenreData: SubGenreData,
-): Record<string, Genre> {
-  const groupedData: Record<string, Genre> = {};
-
-  for (const genre in data) {
-    const count = data[genre];
-    let umbrellaGenre = genre;
-
-    for (const subGenreKey in subGenreData) {
-      const subGenres = subGenreData[subGenreKey].subGenres;
-      const foundSubGenre = subGenres.find((sub) => sub.genre === genre);
-      if (foundSubGenre) {
-        umbrellaGenre = subGenreKey;
-        break;
-      }
-    }
-
-    if (!groupedData[umbrellaGenre]) {
-      groupedData[umbrellaGenre] = {
-        genre: umbrellaGenre,
-        count: 0,
-        color: subGenreData[umbrellaGenre]?.color || '',
-        size: subGenreData[umbrellaGenre]?.size || 0,
-        top: subGenreData[umbrellaGenre]?.top || 0,
-        left: subGenreData[umbrellaGenre]?.left || 0,
-      };
-    }
-
-    groupedData[umbrellaGenre].count += count;
-  }
-
-  return groupedData;
-}
 
 export default GenreList;

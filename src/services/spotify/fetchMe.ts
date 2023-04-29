@@ -1,12 +1,12 @@
-export const fetchMe = async () => {
-  const me = await fetch('https://api.spotify.com/v1/me', {
-    method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + localStorage.getItem('access_token'),
-    },
-  }).then((data) => data.json());
+import { UserObjectPrivate } from '@/types/spotify-node-api';
+import { getSpotify } from './getSpotify';
 
-  return me;
+export const fetchMe = async () => {
+  const data = await getSpotify<UserObjectPrivate>({
+    url: 'https://api.spotify.com/v1/me',
+  });
+
+  return data;
 };
 
 export default fetchMe;

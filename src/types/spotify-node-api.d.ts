@@ -1,3 +1,4 @@
+/* eslint-disable */
 export interface RecommendationsOptionsObject {
   limit?: number | undefined;
   market?: string | undefined;

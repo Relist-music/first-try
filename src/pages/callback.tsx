@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
 import { fetchSpotifyTokens } from '@/services';
-import { GenreAggregateV1 } from '@/types/myTypes';
 
 const Callback = () => {
   useEffect(() => {
@@ -16,6 +15,7 @@ const Callback = () => {
         window.location.href = '/relist';
       } else {
         try {
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
           await fetchSpotifyTokens(code!).then(
             () => (window.location.href = '/relist'),
           );
