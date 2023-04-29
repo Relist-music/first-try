@@ -1,9 +1,9 @@
 import queryString from 'query-string';
-import { getWaitedSpotify } from './getSpotify';
+import { getSpotify } from './getSpotify';
 import { SavedTrackObject } from '@/types/spotify-node-api';
 
 export const fetchLiked = async () => {
-  const data = await getWaitedSpotify<SavedTrackObject>({
+  const data = await getSpotify<SavedTrackObject>({
     url: queryString.stringifyUrl({
       url: 'https://api.spotify.com/v1/me/tracks',
     }),

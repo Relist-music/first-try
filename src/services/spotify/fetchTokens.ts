@@ -2,7 +2,6 @@ import { printLocalStorage } from '@/services';
 
 export const fetchTokens = async (code: string) => {
   try {
-    debugger;
     const data = await fetch('https://accounts.spotify.com/api/token', {
       method: 'POST',
       body: new URLSearchParams({

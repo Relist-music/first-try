@@ -1,15 +1,10 @@
-import wait from 'waait';
+import { getWithBackoffRetry } from './getFetcher';
 
 export const getSpotify = async <T>({ url }: { url: string }): Promise<T> => {
-  return fetch(url, {
-    headers: {
-      Authorization: 'Bearer ' + localStorage.getItem('access_token'),
+  return getWithBackoffRetry({ url, maxRetries: 4, retryDelay: 1000 }).then(
+    (response) => {
+      console.log(response.status, response);
+      return response.json();
     },
-  }).then((response) => response.json());
-};
-
-export const getWaitedSpotify = async <T>({ url }: { url: string }) => {
-  const data = await getSpotify<T>({ url });
-  await wait(1000);
-  return data;
+  );
 };
