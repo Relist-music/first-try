@@ -7,7 +7,7 @@ import {
   faHeart as faSolidHeart,
   faUmbrella,
 } from '@fortawesome/free-solid-svg-icons';
-import { GenreAggregateV1 } from '@/types';
+import { GenreAggregateV1, usefullArtist } from '@/types/myTypes';
 import { TableCheckboxCell } from './TableCell';
 import GenresGrouping from '@/data/GENRES_GROUPING.json';
 
@@ -30,7 +30,7 @@ const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
               {richGenreTrack.trackName}
             </h6>
             <div id="artists" className="flex gap-x-1">
-              {richGenreTrack.trackArtists.map((artist) => (
+              {richGenreTrack.trackArtists.map((artist: usefullArtist) => (
                 <span key={artist.id} className="text-sm">
                   {artist.name}
                 </span>
@@ -51,7 +51,7 @@ const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
             </span>
           ) : useUmbrellaGenres ? (
             richGenreTrack.genres
-              .map((genre, index) => {
+              .map((genre: string) => {
                 let value = genre;
                 GenresGrouping.forEach((umbrella) => {
                   const foundSubGenre = umbrella.subGenres.find(

@@ -1,5 +1,5 @@
 import fetchArtists from '@/services/spotify/fetchArtists';
-import { getWaitedSpotify } from '@/services/spotify/fetchSpotify';
+import { getWaitedSpotify } from '@/services/spotify/getSpotify';
 import { GenreAggregateV1 } from '@/types/myTypes';
 import { PagingObject, SavedTrackObject } from '@/types/spotify-node-api';
 import { useState, useEffect } from 'react';

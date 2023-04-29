@@ -1,5 +1,5 @@
 import queryString from 'query-string';
-import { getWaitedSpotify } from './fetchSpotify';
+import { getWaitedSpotify } from './getSpotify';
 import { MultipleArtistsResponse } from '@/types/spotify-node-api';
 
 export const fetchArtists = async ({ artistIds }: { artistIds: string[] }) => {
