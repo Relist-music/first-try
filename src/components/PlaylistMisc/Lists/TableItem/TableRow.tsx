@@ -3,10 +3,7 @@ import { FilterContext } from '@/components/Playlist';
 import Image from 'next/image';
 import prettyMilliseconds from 'pretty-ms';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHeart as faSolidHeart,
-  faUmbrella,
-} from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faSolidHeart } from '@fortawesome/free-solid-svg-icons';
 import { GenreAggregateV1, usefullArtist } from '@/types/myTypes';
 import { TableCheckboxCell } from './TableCell';
 import GenresGrouping from '@/data/GENRES_GROUPING.json';

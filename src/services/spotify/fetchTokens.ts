@@ -1,4 +1,3 @@
-import waait from 'waait';
 import { printLocalStorage } from '@/services';
 
 export const fetchTokens = async (code: string) => {

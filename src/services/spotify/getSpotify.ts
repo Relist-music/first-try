@@ -1,4 +1,3 @@
-import { PagingObject } from '@/types/spotify-node-api';
 import wait from 'waait';
 
 export const getSpotify = async <T>({ url }: { url: string }): Promise<T> => {
