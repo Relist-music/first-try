@@ -43,8 +43,6 @@ function groupGenres(
   return groupedData;
 }
 
-export default GenreList;
-
 const GenreList = () => {
   // eslint-disable-next-line prettier/prettier
   const [umbrellaGenres, setUmbrellaGenres] = useState<GENRES_OBJECT_WITH_COUNT[]>([]);
@@ -192,3 +190,5 @@ interface SubGenre {
 }
 
 type SubGenreData = Record<string, SubGenre>;
+
+export default GenreList;
