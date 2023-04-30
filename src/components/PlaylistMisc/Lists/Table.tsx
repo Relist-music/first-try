@@ -12,14 +12,11 @@ const TableHead = () => {
     <thead>
       <tr>
         <TableCheckboxCell />
-        <th className="pb-2 text-left uppercase px-0">
+        <th className="pb-2 text-left uppercase">
           Title
           <hr />
         </th>
-        <th
-          className="pb-2  text-left uppercase max-w-[60rem]"
-          // style={{ maxWidth: '100px' }}
-        >
+        <th className="pb-2  text-left uppercase">
           Genres
           <Switch
             checked={useUmbrellaGenres}

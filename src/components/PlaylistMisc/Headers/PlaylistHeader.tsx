@@ -9,7 +9,9 @@ const PlaylistHeader = ({
 }) => (
   <div id="header" className="flex items-end gap-x-2">
     <Image src={imageUrl} alt="spotify like image" width="120" height="120" />
-    <h1 style={{ lineHeight: '120%' }}>{title}</h1>
+    <h1 className="text-2xl font-bold" style={{ lineHeight: '120%' }}>
+      {title}
+    </h1>
   </div>
 );
 

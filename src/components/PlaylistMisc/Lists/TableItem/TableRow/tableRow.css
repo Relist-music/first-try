@@ -1,0 +1,3 @@
+.table-col--genres{
+  max-width: min(60rem, 800px);
+}

@@ -17,3 +17,5 @@
 
 @tailwind components;
 @tailwind utilities;
+
+@import '../components/PlaylistMisc/Lists/TableItem/TableRow/tableRow.css'
