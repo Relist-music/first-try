@@ -1,8 +1,13 @@
 import useAllLiked from '@/hooks/useAllLiked';
 import Playlist from '@/components/Playlist';
+import savedGenresAggregate from '@/public/jsons/savedGenresAggregate.json';
 
 const Relist = () => {
   const { liked, isLoading } = useAllLiked();
+
+  if (savedGenresAggregate) {
+    return <Playlist list={savedGenresAggregate} />;
+  }
 
   return (
     <>

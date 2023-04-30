@@ -18,6 +18,7 @@ const TableCellCheckbox = () => {
           type="checkbox"
           checked={selected}
           style={styleValue}
+          onChange={(e) => console.log(e)}
         />
       </label>
     </td>
