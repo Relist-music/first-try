@@ -5,7 +5,7 @@ import prettyMilliseconds from 'pretty-ms';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faSolidHeart } from '@fortawesome/free-solid-svg-icons';
 import { GenreAggregateV1, usefullArtist } from '@/types/myTypes';
-import { TableCheckboxCell } from './TableCell';
+import { TableCheckboxCell } from '../TableCell';
 import GenresGrouping from '@/data/GENRES_GROUPING.json';
 
 const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
@@ -37,10 +37,7 @@ const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
           </div>
         </div>
       </td>
-      <td
-        className="max-w-[60rem]"
-        // style={{ maxWidth: '100px' }}
-      >
+      <td className="table-col--genres">
         <div id="genres" className="flex flex-wrap gap-x-1">
           {richGenreTrack.genres.length === 0 ? (
             <span className="text-switzer italic font-medium">
