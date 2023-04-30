@@ -1,0 +1,971 @@
+[
+    {
+        "trackId": "6vegnfDS8DAEaCqWaPYGPy",
+        "trackName": "Otis",
+        "trackArtists": [
+            {
+                "name": "JAY-Z",
+                "id": "3nFkdlSjzX9mRTtwJOzDYB",
+                "genres": [
+                    "east coast hip hop",
+                    "hip hop",
+                    "rap"
+                ]
+            },
+            {
+                "name": "Kanye West",
+                "id": "5K4W6rqBFWDnAN6FQUkS6x",
+                "genres": [
+                    "chicago rap",
+                    "rap"
+                ]
+            },
+            {
+                "name": "Otis Redding",
+                "id": "60df5JBRRPcnSpsIMxxwQm",
+                "genres": [
+                    "classic soul",
+                    "memphis soul",
+                    "soul",
+                    "soul blues",
+                    "southern soul"
+                ]
+            }
+        ],
+        "genres": [
+            "east coast hip hop",
+            "hip hop",
+            "rap",
+            "chicago rap",
+            "rap",
+            "classic soul",
+            "memphis soul",
+            "soul",
+            "soul blues",
+            "southern soul"
+        ],
+        "haveMultipleArtists": true,
+        "isrc": "USUM71111634",
+        "album": {
+            "name": "Watch The Throne (Deluxe)",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273699bfca9512ee8d1fbf126a7",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02699bfca9512ee8d1fbf126a7",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851699bfca9512ee8d1fbf126a7",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-18T19:51:50Z",
+        "duration_ms": 178213
+    },
+    {
+        "trackId": "7bsuDXP8mzVLmgQPqZTW1A",
+        "trackName": "Achille",
+        "trackArtists": [
+            {
+                "name": "Lomepal",
+                "id": "1Yfe3ONJlioHys7jwHdfVm",
+                "genres": [
+                    "french hip hop",
+                    "rap conscient"
+                ]
+            }
+        ],
+        "genres": [
+            "french hip hop",
+            "rap conscient"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "FR6031501790",
+        "album": {
+            "name": "ODSL",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2739ad66b23e6faf691518de9ab",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e029ad66b23e6faf691518de9ab",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048519ad66b23e6faf691518de9ab",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-17T17:35:47Z",
+        "duration_ms": 269945
+    },
+    {
+        "trackId": "2BK83HDgnsSMXJbxmqKqOs",
+        "trackName": "Source of Innovation",
+        "trackArtists": [
+            {
+                "name": "Guy Skornik",
+                "id": "1Kydq995mVyxq9ccZ5DYIe",
+                "genres": [
+                    "rock progressif francais",
+                    "vintage french psychedelic"
+                ]
+            },
+            {
+                "name": "Elisabeth Skornik",
+                "id": "7MML43EwPPnBQLUDAp5vlZ",
+                "genres": []
+            }
+        ],
+        "genres": [
+            "rock progressif francais",
+            "vintage french psychedelic"
+        ],
+        "haveMultipleArtists": true,
+        "isrc": "FRZPA1510070",
+        "album": {
+            "name": "Arts & Crafts",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273b0189fb3336260178331de45",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02b0189fb3336260178331de45",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851b0189fb3336260178331de45",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-15T12:31:00Z",
+        "duration_ms": 141533
+    },
+    {
+        "trackId": "1PPwghTeQBBKkEGJrf6noY",
+        "trackName": "California - Tchad Blake Mix",
+        "trackArtists": [
+            {
+                "name": "Phantom Planet",
+                "id": "0LsTFjEB1IIrh7IlTxs1GY",
+                "genres": []
+            }
+        ],
+        "genres": [],
+        "haveMultipleArtists": false,
+        "isrc": "USSM10105453",
+        "album": {
+            "name": "Phantom Planet",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273864b2ea558d09bb2e25c1dab",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02864b2ea558d09bb2e25c1dab",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851864b2ea558d09bb2e25c1dab",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-14T09:07:39Z",
+        "duration_ms": 193693
+    },
+    {
+        "trackId": "1Vj841tSYQw3nGpI5sPPEJ",
+        "trackName": "Walk The Line",
+        "trackArtists": [
+            {
+                "name": "Jadu Heart",
+                "id": "7vjRpVXoecwKTEsrb9iscj",
+                "genres": [
+                    "indie soul",
+                    "vapor soul"
+                ]
+            }
+        ],
+        "genres": [
+            "indie soul",
+            "vapor soul"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "UKQY82000052",
+        "album": {
+            "name": "Hyper Romance",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27371ca4f635950b4f94568ac28",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0271ca4f635950b4f94568ac28",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485171ca4f635950b4f94568ac28",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-08T10:31:43Z",
+        "duration_ms": 193342
+    },
+    {
+        "trackId": "4tD1yPBurB7vrL3ZzareRF",
+        "trackName": "Réseau - Kareem Ali Remix",
+        "trackArtists": [
+            {
+                "name": "Febueder",
+                "id": "3cvmzdKOmgBn7PrHkvnH0e",
+                "genres": [
+                    "uk alternative pop"
+                ]
+            },
+            {
+                "name": "Kareem Ali",
+                "id": "4Uhgu5miW68A3eqRl26xtf",
+                "genres": []
+            }
+        ],
+        "genres": [
+            "uk alternative pop"
+        ],
+        "haveMultipleArtists": true,
+        "isrc": "GBKPL2163281",
+        "album": {
+            "name": "RE-ETCHED",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2730d98a9a2d1f47bb51f08cb28",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e020d98a9a2d1f47bb51f08cb28",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048510d98a9a2d1f47bb51f08cb28",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-08T10:20:17Z",
+        "duration_ms": 332253
+    },
+    {
+        "trackId": "0EPSXghhc67nsKmlZ7nbxa",
+        "trackName": "A Long Way Home",
+        "trackArtists": [
+            {
+                "name": "Hampshire & Foat",
+                "id": "2MCTK4nLsRzNMcSD2FxZoT",
+                "genres": [
+                    "spiritual jazz"
+                ]
+            }
+        ],
+        "genres": [
+            "spiritual jazz"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "GBRH31200273",
+        "album": {
+            "name": "Galaxies Like Grains of Sand",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273024662f35877ecf9d333c8a4",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02024662f35877ecf9d333c8a4",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851024662f35877ecf9d333c8a4",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-08T00:01:49Z",
+        "duration_ms": 158404
+    },
+    {
+        "trackId": "2b01skelTF1BLubc68BuUq",
+        "trackName": "Where Will We Go",
+        "trackArtists": [
+            {
+                "name": "Teemong",
+                "id": "513skjUahYIn6uG52eoOIy",
+                "genres": [
+                    "dutch r&b"
+                ]
+            }
+        ],
+        "genres": [
+            "dutch r&b"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "QZHN52290119",
+        "album": {
+            "name": "Where Will We Go",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27305ee25354cbcb9730f8a48b1",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0205ee25354cbcb9730f8a48b1",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485105ee25354cbcb9730f8a48b1",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-08T00:00:29Z",
+        "duration_ms": 268862
+    },
+    {
+        "trackId": "5OJUTZS9QE2qem6FDsEnOM",
+        "trackName": "Heart on Fire",
+        "trackArtists": [
+            {
+                "name": "Little Simz",
+                "id": "6eXZu6O7nAUA5z6vLV8NKI",
+                "genres": [
+                    "alternative r&b",
+                    "escape room",
+                    "trap queen"
+                ]
+            }
+        ],
+        "genres": [
+            "alternative r&b",
+            "escape room",
+            "trap queen"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "QMFME2257578",
+        "album": {
+            "name": "NO THANK YOU",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27372f48f1e2e04cc76d06ee708",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0272f48f1e2e04cc76d06ee708",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485172f48f1e2e04cc76d06ee708",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-07T16:23:37Z",
+        "duration_ms": 238831
+    },
+    {
+        "trackId": "4NtUVGAbeXbxTAxCkgZTMW",
+        "trackName": "Roswell",
+        "trackArtists": [
+            {
+                "name": "Fog Lake",
+                "id": "04GCjO1r1hPelibCUq9S8H",
+                "genres": [
+                    "lo-fi indie",
+                    "newfoundland indie",
+                    "small room"
+                ]
+            }
+        ],
+        "genres": [
+            "lo-fi indie",
+            "newfoundland indie",
+            "small room"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "TCACX1792037",
+        "album": {
+            "name": "Dragonchaser",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273c2b910c65b8d18db63e9a45b",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02c2b910c65b8d18db63e9a45b",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851c2b910c65b8d18db63e9a45b",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-06T08:30:12Z",
+        "duration_ms": 153920
+    },
+    {
+        "trackId": "3koAwrM1RO0TGMeQJ3qt9J",
+        "trackName": "$10",
+        "trackArtists": [
+            {
+                "name": "Good Morning",
+                "id": "2kMzxA8edU05hvMFU493zJ",
+                "genres": [
+                    "experimental pop",
+                    "indie garage rock",
+                    "lo-fi indie"
+                ]
+            }
+        ],
+        "genres": [
+            "experimental pop",
+            "indie garage rock",
+            "lo-fi indie"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "AUDJ01801775",
+        "album": {
+            "name": "Prize//Reward",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ee07bd960bebd505c1fd05a8",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ee07bd960bebd505c1fd05a8",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851ee07bd960bebd505c1fd05a8",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-06T08:28:20Z",
+        "duration_ms": 89508
+    },
+    {
+        "trackId": "447hIum9e6lQ5tLfa35a4y",
+        "trackName": "Primative People - Tale Of Us Remix",
+        "trackArtists": [
+            {
+                "name": "Mano Le Tough",
+                "id": "04KmByEP6icXVY0PvJaMMp",
+                "genres": [
+                    "deep disco house",
+                    "deep techno",
+                    "electronica",
+                    "float house",
+                    "melodic techno",
+                    "microhouse",
+                    "minimal techno",
+                    "tech house"
+                ]
+            },
+            {
+                "name": "Tale Of Us",
+                "id": "1UL813H5aj3e8ekE5RqWqc",
+                "genres": [
+                    "deep disco house",
+                    "italian techno",
+                    "melodic techno",
+                    "minimal tech house"
+                ]
+            }
+        ],
+        "genres": [
+            "deep disco house",
+            "deep techno",
+            "electronica",
+            "float house",
+            "melodic techno",
+            "microhouse",
+            "minimal techno",
+            "tech house",
+            "deep disco house",
+            "italian techno",
+            "melodic techno",
+            "minimal tech house"
+        ],
+        "haveMultipleArtists": true,
+        "isrc": "DECY61300035",
+        "album": {
+            "name": "Changing Days (Remixes)",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ddcb54aec0e4311a4da8fa5f",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ddcb54aec0e4311a4da8fa5f",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851ddcb54aec0e4311a4da8fa5f",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-03-01T17:40:45Z",
+        "duration_ms": 426782
+    },
+    {
+        "trackId": "6BKAKoo7J2vwJGZJs5dhGD",
+        "trackName": "CrasH",
+        "trackArtists": [
+            {
+                "name": "ScHoolboy Q",
+                "id": "5IcR3N7QB1j6KBL8eImZ8m",
+                "genres": [
+                    "gangster rap",
+                    "hip hop",
+                    "pop rap",
+                    "rap",
+                    "southern hip hop",
+                    "trap",
+                    "underground hip hop"
+                ]
+            }
+        ],
+        "genres": [
+            "gangster rap",
+            "hip hop",
+            "pop rap",
+            "rap",
+            "southern hip hop",
+            "trap",
+            "underground hip hop"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "USUM71905836",
+        "album": {
+            "name": "CrasH Talk",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273f2149422121d1674c6f4c009",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02f2149422121d1674c6f4c009",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851f2149422121d1674c6f4c009",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-02-28T18:21:44Z",
+        "duration_ms": 161480
+    },
+    {
+        "trackId": "5n0CTysih20NYdT2S0Wpe8",
+        "trackName": "Trouble",
+        "trackArtists": [
+            {
+                "name": "Cage The Elephant",
+                "id": "26T3LtbuGT1Fu9m0eRq5X3",
+                "genres": [
+                    "modern rock",
+                    "punk blues",
+                    "rock"
+                ]
+            }
+        ],
+        "genres": [
+            "modern rock",
+            "punk blues",
+            "rock"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "USRC11502826",
+        "album": {
+            "name": "Tell Me I'm Pretty",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273e7dd69ac32cf313fde62cbad",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02e7dd69ac32cf313fde62cbad",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851e7dd69ac32cf313fde62cbad",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-02-28T17:21:07Z",
+        "duration_ms": 225973
+    },
+    {
+        "trackId": "6REbwUNlppTfcnV4d4ZoZi",
+        "trackName": "Swimming Pools (Drank)",
+        "trackArtists": [
+            {
+                "name": "Kendrick Lamar",
+                "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+                "genres": [
+                    "conscious hip hop",
+                    "hip hop",
+                    "rap",
+                    "west coast rap"
+                ]
+            }
+        ],
+        "genres": [
+            "conscious hip hop",
+            "hip hop",
+            "rap",
+            "west coast rap"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "USUM71207642",
+        "album": {
+            "name": "Swimming Pools (Drank)",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273b5ef185d28724c5573c2ac9c",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02b5ef185d28724c5573c2ac9c",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851b5ef185d28724c5573c2ac9c",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-02-20T19:08:10Z",
+        "duration_ms": 247800
+    },
+    {
+        "trackId": "0m3Ze0cy8qBHSsV2exAfCw",
+        "trackName": "Amazing",
+        "trackArtists": [
+            {
+                "name": "Kanye West",
+                "id": "5K4W6rqBFWDnAN6FQUkS6x",
+                "genres": [
+                    "chicago rap",
+                    "rap"
+                ]
+            },
+            {
+                "name": "Jeezy",
+                "id": "4yBK75WVCQXej1p04GWqxH",
+                "genres": [
+                    "atl hip hop",
+                    "crunk",
+                    "dirty south rap",
+                    "gangster rap",
+                    "hip hop",
+                    "old school atlanta hip hop",
+                    "pop rap",
+                    "rap",
+                    "southern hip hop",
+                    "trap"
+                ]
+            }
+        ],
+        "genres": [
+            "chicago rap",
+            "rap",
+            "atl hip hop",
+            "crunk",
+            "dirty south rap",
+            "gangster rap",
+            "hip hop",
+            "old school atlanta hip hop",
+            "pop rap",
+            "rap",
+            "southern hip hop",
+            "trap"
+        ],
+        "haveMultipleArtists": true,
+        "isrc": "USUM70846401",
+        "album": {
+            "name": "808s & Heartbreak",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273346d77e155d854735410ed18",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02346d77e155d854735410ed18",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851346d77e155d854735410ed18",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-02-17T18:48:14Z",
+        "duration_ms": 238333
+    },
+    {
+        "trackId": "4ITDJTXV4EYU0mxVdK3ebp",
+        "trackName": "Loom — piano reworks",
+        "trackArtists": [
+            {
+                "name": "Eydís Evensen",
+                "id": "2SMBaAG61s9mtyJ0eeXSWx",
+                "genres": [
+                    "compositional ambient",
+                    "neo-classical"
+                ]
+            },
+            {
+                "name": "Ólafur Arnalds",
+                "id": "7E3BRXV9ZbCt5lQTCXMTia",
+                "genres": [
+                    "bow pop",
+                    "compositional ambient",
+                    "icelandic classical",
+                    "neo-classical",
+                    "neoclassical darkwave"
+                ]
+            }
+        ],
+        "genres": [
+            "compositional ambient",
+            "neo-classical",
+            "bow pop",
+            "compositional ambient",
+            "icelandic classical",
+            "neo-classical",
+            "neoclassical darkwave"
+        ],
+        "haveMultipleArtists": true,
+        "isrc": "GBUM72200887",
+        "album": {
+            "name": "Loom — piano reworks",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2732646c42a3b3cf2aa1540b826",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e022646c42a3b3cf2aa1540b826",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048512646c42a3b3cf2aa1540b826",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-02-16T14:53:39Z",
+        "duration_ms": 236999
+    },
+    {
+        "trackId": "2FskqVAl2GkQPO0yDpTqdd",
+        "trackName": "Recover",
+        "trackArtists": [
+            {
+                "name": "Fejká",
+                "id": "0VWvUvjaHaW1OeXtcVISu9",
+                "genres": [
+                    "ambient house",
+                    "new french touch"
+                ]
+            }
+        ],
+        "genres": [
+            "ambient house",
+            "new french touch"
+        ],
+        "haveMultipleArtists": false,
+        "isrc": "QM6MZ2218842",
+        "album": {
+            "name": "Hiraeth",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2739ff2131660f64437c36bfd9c",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e029ff2131660f64437c36bfd9c",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048519ff2131660f64437c36bfd9c",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-02-16T14:36:15Z",
+        "duration_ms": 285200
+    },
+    {
+        "trackId": "4Pd7JgZI8zvewbeZLsIDxe",
+        "trackName": "Hiraeth (feat. Kim Van Loo)",
+        "trackArtists": [
+            {
+                "name": "Fejká",
+                "id": "0VWvUvjaHaW1OeXtcVISu9",
+                "genres": [
+                    "ambient house",
+                    "new french touch"
+                ]
+            },
+            {
+                "name": "Kim Van Loo",
+                "id": "7hNkG8n1xZ8BEpGu51udR1",
+                "genres": []
+            }
+        ],
+        "genres": [
+            "ambient house",
+            "new french touch"
+        ],
+        "haveMultipleArtists": true,
+        "isrc": "QM4TX2231461",
+        "album": {
+            "name": "Hiraeth",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2739ff2131660f64437c36bfd9c",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e029ff2131660f64437c36bfd9c",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048519ff2131660f64437c36bfd9c",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-02-16T14:28:05Z",
+        "duration_ms": 299533
+    },
+    {
+        "trackId": "4aqSyBmCI33p9aWknqvgjH",
+        "trackName": "Sink (feat. Tomasz Mreńca)",
+        "trackArtists": [
+            {
+                "name": "Fejká",
+                "id": "0VWvUvjaHaW1OeXtcVISu9",
+                "genres": [
+                    "ambient house",
+                    "new french touch"
+                ]
+            },
+            {
+                "name": "Tomasz Mreńca",
+                "id": "3gBqZAeUL6W6ygL5SkkaUX",
+                "genres": [
+                    "polish ambient"
+                ]
+            }
+        ],
+        "genres": [
+            "ambient house",
+            "new french touch",
+            "polish ambient"
+        ],
+        "haveMultipleArtists": true,
+        "isrc": "QM6MZ2218843",
+        "album": {
+            "name": "Hiraeth",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2739ff2131660f64437c36bfd9c",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e029ff2131660f64437c36bfd9c",
+                    "width": 300
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048519ff2131660f64437c36bfd9c",
+                    "width": 64
+                }
+            ]
+        },
+        "added_at": "2023-02-16T14:14:13Z",
+        "duration_ms": 319400
+    }
+]
