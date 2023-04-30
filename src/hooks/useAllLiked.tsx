@@ -4,7 +4,7 @@ import { GenreAggregateV1 } from '@/types/myTypes';
 import { PagingObject, SavedTrackObject } from '@/types/spotify-node-api';
 import { useQuery } from '@tanstack/react-query';
 
-const useAllLiked = () => {
+const useAllLiked = (fetchAll = false) => {
   const { data: liked, isLoading } = useQuery<GenreAggregateV1[]>(
     ['likedTracks'],
     async () => {
@@ -42,7 +42,7 @@ const useAllLiked = () => {
           }),
         )) as GenreAggregateV1[];
         allLikedTracks = [...allLikedTracks, ...newData];
-        nextUrl = savedTrackData.next ?? '';
+        nextUrl = fetchAll ? savedTrackData.next : '';
       }
       return allLikedTracks;
     },

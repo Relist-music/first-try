@@ -9,7 +9,9 @@ import { TableCheckboxCell } from './TableCell';
 import GenresGrouping from '@/data/GENRES_GROUPING.json';
 
 const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
-  const { filters, setFilters, useUmbrellaGenres } = useContext(FilterContext);
+  const { filters, setFilters, useUmbrellaGenres, setTracksToPlayIds } =
+    useContext(FilterContext);
+  //TODO: add a slice at to return all atfer that track in a list on setTracksToPlayIds
 
   return (
     <tr key={richGenreTrack.trackId}>
@@ -23,7 +25,10 @@ const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
             height="72"
           />
           <div>
-            <h6 className="font-semibold text-xl">
+            <h6
+              onClick={() => setTracksToPlayIds([richGenreTrack.trackId])}
+              className="font-semibold text-xl"
+            >
               {richGenreTrack.trackName}
             </h6>
             <div id="artists" className="flex gap-x-1">
