@@ -1,3 +1,18 @@
+type CountedGenre = Record<string, number>;
+
+interface Genre {
+  genre: string;
+  count: number;
+  color: string;
+  size: number;
+  top: number;
+  left: number;
+}
+
+interface umbrellaGenre extends Genre {
+  subGenres: string[];
+}
+
 type ISODateString = string;
 
 interface usefullArtist {
