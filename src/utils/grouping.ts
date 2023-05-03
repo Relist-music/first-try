@@ -50,3 +50,39 @@ export function groupSubGenreToUmbrella(
   }
   return umbrellaGroupedData;
 }
+
+// function groupGenres(
+//   data: Record<string, number>,
+//   subGenreData: SubGenreData,
+// ): Record<string, Genre> {
+//   const groupedData: Record<string, Genre> = {};
+
+//   for (const genre in data) {
+//     const count = data[genre];
+//     let umbrellaGenre = genre;
+
+//     for (const subGenreKey in subGenreData) {
+//       const subGenres = subGenreData[subGenreKey].subGenres;
+//       const foundSubGenre = subGenres.find((sub) => sub.genre === genre);
+//       if (foundSubGenre) {
+//         umbrellaGenre = subGenreKey;
+//         break;
+//       }
+//     }
+
+//     if (!groupedData[umbrellaGenre]) {
+//       groupedData[umbrellaGenre] = {
+//         genre: umbrellaGenre,
+//         count: 0,
+//         color: subGenreData[umbrellaGenre]?.color || '',
+//         size: subGenreData[umbrellaGenre]?.size || 0,
+//         top: subGenreData[umbrellaGenre]?.top || 0,
+//         left: subGenreData[umbrellaGenre]?.left || 0,
+//       };
+//     }
+
+//     groupedData[umbrellaGenre].count += count;
+//   }
+
+//   return groupedData;
+// }

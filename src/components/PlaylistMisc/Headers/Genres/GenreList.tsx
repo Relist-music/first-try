@@ -2,55 +2,24 @@ import { FilterContext } from '@/components/Playlist';
 import { useContext } from 'react';
 import { GenreButton } from './GenreButton';
 import { useState, useEffect } from 'react';
-import savedGenresAggregate from '@/data/GENRES_GROUPING_EXTENDED_COLORIZED.json';
-import initialSpotifyGenres from '@/data/initial-spotify-genres-4600-with-color.json';
 import { GENRES_OBJECT_WITH_COUNT } from '@/types/myTypes';
 import { Switch } from '@headlessui/react';
+//
 
-function groupGenres(
-  data: Record<string, number>,
-  subGenreData: SubGenreData,
-): Record<string, Genre> {
-  const groupedData: Record<string, Genre> = {};
-
-  for (const genre in data) {
-    const count = data[genre];
-    let umbrellaGenre = genre;
-
-    for (const subGenreKey in subGenreData) {
-      const subGenres = subGenreData[subGenreKey].subGenres;
-      const foundSubGenre = subGenres.find((sub) => sub.genre === genre);
-      if (foundSubGenre) {
-        umbrellaGenre = subGenreKey;
-        break;
-      }
-    }
-
-    if (!groupedData[umbrellaGenre]) {
-      groupedData[umbrellaGenre] = {
-        genre: umbrellaGenre,
-        count: 0,
-        color: subGenreData[umbrellaGenre]?.color || '',
-        size: subGenreData[umbrellaGenre]?.size || 0,
-        top: subGenreData[umbrellaGenre]?.top || 0,
-        left: subGenreData[umbrellaGenre]?.left || 0,
-      };
-    }
-
-    groupedData[umbrellaGenre].count += count;
-  }
-
-  return groupedData;
-}
+import GENRES_GROUPING from '@/data/GENRES_GROUPING.json';
+import UMBRELLA_GENRES from '@/data/UMBRELLA_GENRES.json';
+import initial_spotify_4000_genres from '@/data/initial_spotify_4000_genres.json';
 
 const GenreList = () => {
+  const { overall, useUmbrellaGenres, setUseUmbrellaGenres } =
+    useContext(FilterContext);
+  //
   // eslint-disable-next-line prettier/prettier
   const [umbrellaGenres, setUmbrellaGenres] = useState<GENRES_OBJECT_WITH_COUNT[]>([]);
   const [enrichedOverall, setEnrichedOverall] = useState<
     GENRES_OBJECT_WITH_COUNT[]
   >([]);
-  const { overall, useUmbrellaGenres, setUseUmbrellaGenres } =
-    useContext(FilterContext);
+
   const [showAllGenres, setShowAllGenres] = useState(false);
   const hasLotOfGenres = Object.keys(overall).length > 10;
   useEffect(() => {
