@@ -1,6 +1,6 @@
 [
   {
-    "genre": "indie",
+    "umbrella": "indie",
     "subGenres": [
       "galway indie",
       "swansea indie",
@@ -446,7 +446,7 @@
     ]
   },
   {
-    "genre": "pop",
+    "umbrella": "pop",
     "subGenres": [
       "nepali pop",
       "classic colombian pop",
@@ -828,7 +828,7 @@
     ]
   },
   {
-    "genre": "metal",
+    "umbrella": "metal",
     "subGenres": [
       "argentine metal",
       "boston metal",
@@ -1156,7 +1156,7 @@
     ]
   },
   {
-    "genre": "rock",
+    "umbrella": "rock",
     "subGenres": [
       "spanish folk rock",
       "canadian rock",
@@ -1467,7 +1467,7 @@
     ]
   },
   {
-    "genre": "folk",
+    "umbrella": "folk",
     "subGenres": [
       "turbo folk",
       "vintage country folk",
@@ -1613,7 +1613,7 @@
     ]
   },
   {
-    "genre": "jazz",
+    "umbrella": "jazz",
     "subGenres": [
       "dinner jazz",
       "indian jazz",
@@ -1744,7 +1744,7 @@
     ]
   },
   {
-    "genre": "punk",
+    "umbrella": "punk",
     "subGenres": [
       "chicano punk",
       "japanese post-punk",
@@ -1864,7 +1864,7 @@
     ]
   },
   {
-    "genre": "rap",
+    "umbrella": "rap",
     "subGenres": [
       "korean trap",
       "military rap",
@@ -2017,7 +2017,7 @@
     ]
   },
   {
-    "genre": "classical",
+    "umbrella": "classical",
     "subGenres": [
       "chinese classical",
       "classical harp",
@@ -2117,7 +2117,7 @@
     ]
   },
   {
-    "genre": "house",
+    "umbrella": "house",
     "subGenres": [
       "nordic house",
       "swiss house",
@@ -2194,7 +2194,7 @@
     ]
   },
   {
-    "genre": "hardcore",
+    "umbrella": "hardcore",
     "subGenres": [
       "post-hardcore",
       "italian post-hardcore",
@@ -2257,7 +2257,7 @@
     ]
   },
   {
-    "genre": "techno",
+    "umbrella": "techno",
     "subGenres": [
       "minimal melodic techno",
       "modular techno",
@@ -2313,7 +2313,7 @@
     ]
   },
   {
-    "genre": "blues",
+    "umbrella": "blues",
     "subGenres": [
       "piano blues",
       "swedish blues",
@@ -2358,7 +2358,7 @@
     ]
   },
   {
-    "genre": "reggae",
+    "umbrella": "reggae",
     "subGenres": [
       "roots reggae",
       "uk reggae",
@@ -2404,7 +2404,7 @@
     ]
   },
   {
-    "genre": "country",
+    "umbrella": "country",
     "subGenres": [
       "alternative country",
       "irish country",
@@ -2439,7 +2439,7 @@
     ]
   },
   {
-    "genre": "gospel",
+    "umbrella": "gospel",
     "subGenres": [
       "brazilian gospel",
       "southern gospel",
@@ -2471,7 +2471,7 @@
     ]
   },
   {
-    "genre": "funk",
+    "umbrella": "funk",
     "subGenres": [
       "deep funk ostentacao",
       "funk ostentacao",
@@ -2507,7 +2507,7 @@
     ]
   },
   {
-    "genre": "soul",
+    "umbrella": "soul",
     "subGenres": [
       "soul",
       "neo soul",
@@ -2536,7 +2536,7 @@
     ]
   },
   {
-    "genre": "latin",
+    "umbrella": "latin",
     "subGenres": [
       "latino comedy",
       "latin shoegaze",
@@ -2562,7 +2562,7 @@
     ]
   },
   {
-    "genre": "trance",
+    "umbrella": "trance",
     "subGenres": [
       "trancecore",
       "goa psytrance",
@@ -2598,7 +2598,7 @@
     ]
   },
   {
-    "genre": "ambient",
+    "umbrella": "ambient",
     "subGenres": [
       "ambient psychill",
       "nordic ambient",
@@ -2622,7 +2622,7 @@
     ]
   },
   {
-    "genre": "worship",
+    "umbrella": "worship",
     "subGenres": [
       "roots worship",
       "world worship",
@@ -2648,7 +2648,7 @@
     ]
   },
   {
-    "genre": "r&b",
+    "umbrella": "r&b",
     "subGenres": [
       "dutch r&b",
       "r&b italiano",
@@ -2672,7 +2672,7 @@
     ]
   },
   {
-    "genre": "emo",
+    "umbrella": "emo",
     "subGenres": [
       "musica piemonteisa",
       "midwest emo",
@@ -2696,7 +2696,7 @@
     ]
   },
   {
-    "genre": "wave",
+    "umbrella": "wave",
     "subGenres": [
       "grave wave",
       "sovietwave",
@@ -2725,7 +2725,7 @@
     ]
   },
   {
-    "genre": "cumbia",
+    "umbrella": "cumbia",
     "subGenres": [
       "nu-cumbia",
       "cumbia andina mexicana",
@@ -2747,7 +2747,7 @@
     ]
   },
   {
-    "genre": "edm",
+    "umbrella": "edm",
     "subGenres": [
       "brazilian edm",
       "edm",
@@ -2764,7 +2764,7 @@
     ]
   },
   {
-    "genre": "ska",
+    "umbrella": "ska",
     "subGenres": [
       "australian ska",
       "euroska",
@@ -2787,7 +2787,7 @@
     ]
   },
   {
-    "genre": "soundtrack",
+    "umbrella": "soundtrack",
     "subGenres": [
       "chinese soundtrack",
       "british soundtrack",
@@ -2806,7 +2806,7 @@
     ]
   },
   {
-    "genre": "electro",
+    "umbrella": "electro",
     "subGenres": [
       "canadian electronic",
       "slovenian electronic",
@@ -2892,7 +2892,7 @@
     ]
   },
   {
-    "genre": "industrial",
+    "umbrella": "industrial",
     "subGenres": [
       "industrial",
       "industrial hip hop",
@@ -2903,7 +2903,7 @@
     ]
   },
   {
-    "genre": "sound",
+    "umbrella": "sound",
     "subGenres": [
       "bakersfield sound",
       "dunedin sound",
@@ -2920,7 +2920,7 @@
     ]
   },
   {
-    "genre": "baroque",
+    "umbrella": "baroque",
     "subGenres": [
       "german baroque",
       "italian baroque",
@@ -2935,7 +2935,7 @@
     ]
   },
   {
-    "genre": "dub",
+    "umbrella": "dub",
     "subGenres": [
       "dub product",
       "dub",
@@ -2955,7 +2955,7 @@
     ]
   },
   {
-    "genre": "comedy",
+    "umbrella": "comedy",
     "subGenres": [
       "canadian comedy",
       "comedy",
@@ -2968,7 +2968,7 @@
     ]
   },
   {
-    "genre": "shoegaze",
+    "umbrella": "shoegaze",
     "subGenres": [
       "german shoegaze",
       "japanese shoegaze",
@@ -2982,7 +2982,7 @@
     ]
   },
   {
-    "genre": "noise",
+    "umbrella": "noise",
     "subGenres": [
       "white noise",
       "power noise",
@@ -2993,7 +2993,7 @@
     ]
   },
   {
-    "genre": "salsa",
+    "umbrella": "salsa",
     "subGenres": [
       "salsa colombiana",
       "salsa international",
@@ -3008,7 +3008,7 @@
     ]
   },
   {
-    "genre": "disco",
+    "umbrella": "disco",
     "subGenres": [
       "deep discofox",
       "dark disco",
@@ -3024,7 +3024,7 @@
     ]
   },
   {
-    "genre": "orchestra",
+    "umbrella": "orchestra",
     "subGenres": [
       "british orchestra",
       "chamber orchestra",
@@ -3038,7 +3038,7 @@
     ]
   },
   {
-    "genre": "swing",
+    "umbrella": "swing",
     "subGenres": [
       "swing revival",
       "swing italiano",
@@ -3052,7 +3052,7 @@
     ]
   },
   {
-    "genre": "drill",
+    "umbrella": "drill",
     "subGenres": [
       "drill",
       "chicago drill",
@@ -3066,7 +3066,7 @@
     ]
   },
   {
-    "genre": "disney",
+    "umbrella": "disney",
     "subGenres": [
       "disney italiano",
       "dutch disney",
@@ -3079,7 +3079,7 @@
     ]
   },
   {
-    "genre": "idol",
+    "umbrella": "idol",
     "subGenres": [
       "j-idol",
       "idol",
@@ -3088,7 +3088,7 @@
     ]
   },
   {
-    "genre": "deathcore",
+    "umbrella": "deathcore",
     "subGenres": [
       "technical deathcore",
       "slamming deathcore",
@@ -3101,7 +3101,7 @@
     ]
   },
   {
-    "genre": "others",
+    "umbrella": "others",
     "subGenres": [
       "poezja spiewana",
       "rhythm and boogie",

@@ -1,57 +1,21 @@
 import { FilterContext } from '@/components/Playlist';
 import { useContext } from 'react';
 import { GenreButton } from './GenreButton';
-import { useState, useEffect } from 'react';
-import { GENRES_OBJECT_WITH_COUNT } from '@/types/myTypes';
+import { useState } from 'react';
 import { Switch } from '@headlessui/react';
-//
 
-import GENRES_GROUPING from '@/data/GENRES_GROUPING.json';
-import UMBRELLA_GENRES from '@/data/UMBRELLA_GENRES.json';
-import initial_spotify_4000_genres from '@/data/initial_spotify_4000_genres.json';
+import { useGroupUmbrellaGenres } from '@/hooks/grouping';
+import { enrichSubgenre } from '@/utils/enrich';
+
+import SUBGENRES from '@/data/SUBGENRES.json';
 
 const GenreList = () => {
-  const { overall, useUmbrellaGenres, setUseUmbrellaGenres } =
+  const { countedGenres, useUmbrellaGenres, setUseUmbrellaGenres } =
     useContext(FilterContext);
-  //
-  // eslint-disable-next-line prettier/prettier
-  const [umbrellaGenres, setUmbrellaGenres] = useState<GENRES_OBJECT_WITH_COUNT[]>([]);
-  const [enrichedOverall, setEnrichedOverall] = useState<
-    GENRES_OBJECT_WITH_COUNT[]
-  >([]);
 
   const [showAllGenres, setShowAllGenres] = useState(false);
-  const hasLotOfGenres = Object.keys(overall).length > 10;
-  useEffect(() => {
-    setEnrichedOverall(
-      Object.entries(overall).map((subGenre) => {
-        const match = initialSpotifyGenres.find(
-          (genreObj) => genreObj.genre === subGenre[0],
-        );
-        return {
-          genre: match?.genre || subGenre[0],
-          count: subGenre[1],
-          // eslint-disable-next-line prettier/prettier
-          color:
-            match?.color ||
-            `rgb(${Math.random() * 255},${Math.random() * 255},${
-              Math.random() * 255
-            })`,
-          size: Number(match?.size) || NaN,
-          left: Number(match?.left) || NaN,
-          top: Number(match?.top) || NaN,
-        };
-      }),
-    );
-  }, [overall]);
-
-  useEffect(() => {
-    if (useUmbrellaGenres) {
-      const groupedGenres = groupGenres(overall, savedGenresAggregate);
-      console.log('groupedGenres', groupedGenres);
-      setUmbrellaGenres(Object.values(groupedGenres));
-    }
-  }, [overall, useUmbrellaGenres]);
+  const hasLotOfGenres = countedGenres.length > 10;
+  const { umbrellaGenres } = useGroupUmbrellaGenres();
 
   return (
     <div>
@@ -88,14 +52,19 @@ const GenreList = () => {
               .map((genre, index) => (
                 <GenreButton
                   key={`${index}-orevall-${genre}`}
-                  genre={genre.genre}
+                  genre={genre.name}
                   count={genre.count}
                   index={index}
                   color={genre.color}
                 />
               ))
-          : enrichedOverall
-          ? enrichedOverall
+          : countedGenres
+              .map((countedGenres) =>
+                enrichSubgenre({
+                  genreWithCount: countedGenres,
+                  genreObjectList: SUBGENRES,
+                }),
+              )
               .sort((a, b) => {
                 return a.count < b.count ? 1 : -1;
               })
@@ -105,23 +74,10 @@ const GenreList = () => {
               .map((genre, index) => (
                 <GenreButton
                   key={`${index}-orevall-${genre}`}
-                  genre={genre.genre}
+                  genre={genre.name}
                   count={genre.count}
                   index={index}
                   color={genre.color}
-                />
-              ))
-          : Object.entries(overall)
-              .sort((a, b) => b[1] - a[1])
-              .filter((_, index) =>
-                hasLotOfGenres ? (showAllGenres ? true : index < 10) : true,
-              )
-              .map(([genre, count], index) => (
-                <GenreButton
-                  key={`${index}-orevall-${genre}`}
-                  genre={genre}
-                  count={count}
-                  index={index}
                 />
               ))}
       </div>

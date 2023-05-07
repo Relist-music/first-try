@@ -1,9 +1,5 @@
-import { CountedGenre } from '@/types/myTypes';
-
-interface GenresGrouping {
-  umbrella: string;
-  subGenres: string[];
-}
+import { RelistGenre, GenresGrouping } from '@/types/myTypes';
+import { UmbrellaGenre2 } from '@/types/myTypes2';
 
 export function mapSubgenresToUmbrella({
   subGenre,
@@ -27,62 +23,64 @@ export function mapUmbrellaToSubgenres({
 }
 
 export function groupSubGenreToUmbrella(
-  countedGenre: CountedGenre,
+  countedGenre: Pick<RelistGenre, 'name' | 'count'>,
   genresGrouping: GenresGrouping[],
 ) {
-  const umbrellaGroupedData: CountedGenre = {};
+  const [key, count] = [countedGenre['name'], countedGenre['count']];
 
-  for (const countedGenreKey in countedGenre) {
-    const [key, count] = [countedGenreKey, countedGenre[countedGenreKey]];
+  const umbrellaGenre = mapSubgenresToUmbrella({
+    subGenre: key,
+    genresGrouping,
+  });
 
-    const umbrellaGenre = mapSubgenresToUmbrella({
-      subGenre: key,
-      genresGrouping,
-    });
-
-    if (umbrellaGenre) {
-      if (umbrellaGroupedData[umbrellaGenre]) {
-        umbrellaGroupedData[umbrellaGenre] += count;
-      } else {
-        umbrellaGroupedData[umbrellaGenre] = count;
-      }
-    }
+  if (umbrellaGenre) {
+    return {
+      name: umbrellaGenre,
+      count,
+    };
   }
-  return umbrellaGroupedData;
 }
 
-// function groupGenres(
-//   data: Record<string, number>,
-//   subGenreData: SubGenreData,
-// ): Record<string, Genre> {
-//   const groupedData: Record<string, Genre> = {};
+export function groupGenre(
+  countedGenres: Pick<RelistGenre, 'name' | 'count'>[],
+  umbrellaWithSubGenreList: GenresGrouping[],
+  umbrellaGenreList: UmbrellaGenre2[],
+) {
+  const umbrellaGroupedData: RelistGenre[] = [];
 
-//   for (const genre in data) {
-//     const count = data[genre];
-//     let umbrellaGenre = genre;
+  countedGenres.forEach((countedGenre) => {
+    const umbrella = groupSubGenreToUmbrella(
+      countedGenre,
+      umbrellaWithSubGenreList,
+    );
 
-//     for (const subGenreKey in subGenreData) {
-//       const subGenres = subGenreData[subGenreKey].subGenres;
-//       const foundSubGenre = subGenres.find((sub) => sub.genre === genre);
-//       if (foundSubGenre) {
-//         umbrellaGenre = subGenreKey;
-//         break;
-//       }
-//     }
+    if (umbrella) {
+      const match = umbrellaGenreList.find((g) => g.genre === umbrella.name);
 
-//     if (!groupedData[umbrellaGenre]) {
-//       groupedData[umbrellaGenre] = {
-//         genre: umbrellaGenre,
-//         count: 0,
-//         color: subGenreData[umbrellaGenre]?.color || '',
-//         size: subGenreData[umbrellaGenre]?.size || 0,
-//         top: subGenreData[umbrellaGenre]?.top || 0,
-//         left: subGenreData[umbrellaGenre]?.left || 0,
-//       };
-//     }
+      if (match) {
+        const convertedMatch = {
+          ...match,
+          size: Number(match.size),
+          top: Number(match.top),
+          left: Number(match.left),
+        };
 
-//     groupedData[umbrellaGenre].count += count;
-//   }
+        const existingUmbrella = umbrellaGroupedData.find(
+          (g) => g.name === umbrella.name,
+        );
 
-//   return groupedData;
-// }
+        if (existingUmbrella) {
+          existingUmbrella.count += countedGenre.count;
+        } else {
+          umbrellaGroupedData.push({
+            ...convertedMatch,
+            name: umbrella.name,
+            count: countedGenre.count,
+          });
+        }
+      }
+    }
+  });
+
+  return umbrellaGroupedData;
+}
