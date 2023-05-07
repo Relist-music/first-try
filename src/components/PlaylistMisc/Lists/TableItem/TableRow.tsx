@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faSolidHeart } from '@fortawesome/free-solid-svg-icons';
 import { GenreAggregateV1, usefullArtist } from '@/types/myTypes';
 import { TableCheckboxCell } from './TableCell';
-import GenresGrouping from '@/data/GENRES_GROUPING.json';
+import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
 
 const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
   const { filters, setFilters, useUmbrellaGenres } = useContext(FilterContext);
@@ -50,13 +50,13 @@ const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
             richGenreTrack.genres
               .map((genre: string) => {
                 let value = genre;
-                GenresGrouping.forEach((umbrella) => {
+                UMBRELLA_WITH_SUBGENRES.forEach((umbrella) => {
                   const foundSubGenre = umbrella.subGenres.find(
                     (subgenre) => subgenre === genre,
                   );
 
                   if (foundSubGenre) {
-                    value = umbrella.genre;
+                    value = umbrella.umbrella;
                   }
                 });
                 return value;

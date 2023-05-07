@@ -1,0 +1,370 @@
+[
+  {
+    "genre": "indie",
+    "color": "rgb(158, 132, 46)",
+    "size": null,
+    "top": null,
+    "left": null,
+    "alreadyInAllGenres": false
+  },
+  {
+    "genre": "pop",
+    "color": "rgb(174, 134, 15)",
+    "size": "1",
+    "top": "78.5933457674027",
+    "left": "53.2666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "metal",
+    "color": "rgb(217, 81, 57)",
+    "size": "0.2",
+    "top": "59.6293845135672",
+    "left": "16.4",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "rock",
+    "color": "rgb(175, 112, 30)",
+    "size": "0.616666666666667",
+    "top": "50.4602611154563",
+    "left": "33.2666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "folk",
+    "color": "rgb(101, 145, 15)",
+    "size": "0.2",
+    "top": "28.7046507430359",
+    "left": "51.3333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "jazz",
+    "color": "rgb(83, 143, 106)",
+    "size": "0.0833333333333333",
+    "top": "14.1688225738524",
+    "left": "61.6",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "punk",
+    "color": "rgb(213, 85, 36)",
+    "size": "0.166666666666667",
+    "top": "58.6667468864689",
+    "left": "24.9333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "rap",
+    "color": "rgb(172, 128, 5)",
+    "size": "0.683333333333333",
+    "top": "72.7874375789664",
+    "left": "72.2666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "classical",
+    "color": "rgb(36, 159, 141)",
+    "size": "0.133333333333333",
+    "top": "3.82648456771554",
+    "left": "25.4666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "house",
+    "color": "rgb(204, 126, 109)",
+    "size": "0.216666666666667",
+    "top": "94.0075807713134",
+    "left": "73.3333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "hardcore",
+    "color": "rgb(228, 78, 38)",
+    "size": "0.0166666666666667",
+    "top": "53.6550147403887",
+    "left": "22.8666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "techno",
+    "color": "rgb(182, 136, 190)",
+    "size": "0.0333333333333333",
+    "top": "93.1111244810781",
+    "left": "76.4666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "blues",
+    "color": "rgb(105, 134, 34)",
+    "size": "0.0666666666666667",
+    "top": "19.8183021478852",
+    "left": "67.4666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "reggae",
+    "color": "rgb(138, 143, 32)",
+    "size": "0.116666666666667",
+    "top": "67.7817219180555",
+    "left": "80.7333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "country",
+    "color": "rgb(129, 139, 9)",
+    "size": "0.283333333333333",
+    "top": "44.4076770350761",
+    "left": "48.2",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "gospel",
+    "color": "rgb(130, 130, 6)",
+    "size": "0.05",
+    "top": "32.7898441730341",
+    "left": "37.3333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "funk",
+    "color": "rgb(149, 123, 31)",
+    "size": "0.2",
+    "top": "49.8225136875038",
+    "left": "60",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "soul",
+    "color": "rgb(110, 134, 18)",
+    "size": "0.233333333333333",
+    "top": "28.7046507430359",
+    "left": "55.6",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "latin",
+    "color": "rgb(173, 137, 5)",
+    "size": "0.55",
+    "top": "66.1993863185127",
+    "left": "63.9333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "trance",
+    "color": "rgb(208, 124, 123)",
+    "size": "0.1",
+    "top": "91.258047048914",
+    "left": "43.5333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "ambient",
+    "color": "rgb(85, 147, 195)",
+    "size": "0.05",
+    "top": "36.357619878467",
+    "left": "21.6666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "worship",
+    "color": "rgb(147, 139, 17)",
+    "size": "0.15",
+    "top": "61.1154563504001",
+    "left": "24.8",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "r&b",
+    "color": "rgb(157, 136, 6)",
+    "size": "0.316666666666667",
+    "top": "74.0328500090247",
+    "left": "61.3333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "emo",
+    "color": "rgb(198, 107, 27)",
+    "size": "0.15",
+    "top": "65.5315564647133",
+    "left": "22.8666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "wave",
+    "color": "rgb(154, 151, 154)",
+    "size": "0.0333333333333333",
+    "top": "78.3647193309668",
+    "left": "40.4",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "cumbia",
+    "color": "rgb(166, 141, 16)",
+    "size": "0.05",
+    "top": "51.9463329522893",
+    "left": "76.5333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "edm",
+    "color": "rgb(204, 125, 72)",
+    "size": "0.433333333333333",
+    "top": "89.4410685277661",
+    "left": "53.7333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "ska",
+    "color": "rgb(152, 134, 37)",
+    "size": "0.0833333333333333",
+    "top": "58.2816918356296",
+    "left": "72.6",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "soundtrack",
+    "color": "rgb(61, 155, 193)",
+    "size": "0.133333333333333",
+    "top": "25.2572047409903",
+    "left": "16.4",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "electro",
+    "color": "rgb(175, 120, 82)",
+    "size": "0.0666666666666667",
+    "top": "88.1114253053366",
+    "left": "78.2",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "industrial",
+    "color": "rgb(168, 103, 109)",
+    "size": "0.0666666666666667",
+    "top": "69.8333433608086",
+    "left": "34.2666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "sound",
+    "color": "rgb(190, 0, 198)",
+    "size": "0.0333333333333333",
+    "top": "28.6264364358342",
+    "left": "5.4",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "baroque",
+    "color": "rgb(43, 164, 116)",
+    "size": "0.0666666666666667",
+    "top": "8.86829913964262",
+    "left": "26.4666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "dub",
+    "color": "rgb(134, 145, 49)",
+    "size": "0.0666666666666667",
+    "top": "72.1496901510138",
+    "left": "83.0666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "comedy",
+    "color": "rgb(156, 73, 4)",
+    "size": "0.0333333333333333",
+    "top": "19.0060766500211",
+    "left": "65.3333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "shoegaze",
+    "color": "rgb(164, 124, 119)",
+    "size": "0.0666666666666667",
+    "top": "61.9818302147885",
+    "left": "17.3333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "noise",
+    "color": "rgb(168, 56, 159)",
+    "size": "0",
+    "top": "45.5929246134408",
+    "left": "12.8",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "salsa",
+    "color": "rgb(161, 134, 26)",
+    "size": "0.116666666666667",
+    "top": "38.2106973106311",
+    "left": "69.9333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "disco",
+    "color": "rgb(158, 122, 23)",
+    "size": "0.166666666666667",
+    "top": "61.2478190241261",
+    "left": "58.8",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "orchestra",
+    "color": "rgb(55, 151, 159)",
+    "size": "0.0166666666666667",
+    "top": "11.6599482582275",
+    "left": "16.6",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "swing",
+    "color": "rgb(77, 139, 86)",
+    "size": "0.0666666666666667",
+    "top": "12.1773659827928",
+    "left": "61.7333333333333",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "drill",
+    "color": "rgb(161, 143, 2)",
+    "size": "0.0833333333333333",
+    "top": "72.6370254497323",
+    "left": "64.6666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "disney",
+    "color": "rgb(80, 146, 85)",
+    "size": "0.0666666666666667",
+    "top": "24.3487154804163",
+    "left": "32.2666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "idol",
+    "color": "rgb(154, 140, 12)",
+    "size": "0.0333333333333333",
+    "top": "61.2598519944648",
+    "left": "37.6666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "deathcore",
+    "color": "rgb(232, 69, 79)",
+    "size": "0.05",
+    "top": "67.3184525600144",
+    "left": "15.0666666666667",
+    "alreadyInAllGenres": true
+  },
+  {
+    "genre": "others",
+    "color": "rgb(137, 135, 65)",
+    "size": null,
+    "top": null,
+    "left": null,
+    "alreadyInAllGenres": false
+  }
+]
