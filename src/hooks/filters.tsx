@@ -1,24 +1,5 @@
-import { FilterContext } from '@/components/Playlist';
 import { GenreAggregateV1, RelistGenre } from '@/types/myTypes';
-import { useContext, useEffect, useState } from 'react';
-
-export const ToggleSubgenreFilter = (subgenre: GenreAggregateV1) => {
-  const { setFilteredList } = useContext(FilterContext);
-  setFilteredList((filters) =>
-    filters.includes(subgenre)
-      ? filters.filter((filter) => filter !== subgenre)
-      : [...filters, subgenre],
-  );
-};
-
-export const ToggleUmbrellaGenreFilter = (umbrella: GenreAggregateV1) => {
-  const { setFilteredList } = useContext(FilterContext);
-  setFilteredList((filters) =>
-    filters.includes(umbrella)
-      ? filters.filter((filter) => filter !== umbrella)
-      : [...filters, umbrella],
-  );
-};
+import { useEffect, useState } from 'react';
 
 export const useFilterList = ({
   list,
@@ -29,6 +10,7 @@ export const useFilterList = ({
 }) => {
   const [filteredList, setFilteredList] = useState<GenreAggregateV1[]>(list);
 
+  // this is a loose filter
   useEffect(() => {
     setFilteredList([
       ...list.filter((richGenreTrack: GenreAggregateV1) => {
