@@ -8,7 +8,7 @@ import { useGroupUmbrellaGenres } from '@/hooks/grouping';
 import { enrichSubgenre } from '@/utils/enrich';
 
 import SUBGENRES from '@/data/SUBGENRES.json';
-import ShowMoreButton from '@/components/design-system/buttons/showMore';
+import ShowMoreButton from '@/components/design-system/buttons/ShowMore';
 
 const GenreList = () => {
   const { countedGenres, useUmbrellaGenres, setUseUmbrellaGenres } =
