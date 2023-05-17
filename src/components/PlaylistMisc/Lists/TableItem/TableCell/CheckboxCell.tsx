@@ -17,6 +17,8 @@ const TableCellCheckbox = () => {
           id="select1"
           type="checkbox"
           checked={selected}
+          // eslint-disable-next-line @typescript-eslint/no-empty-function
+          onChange={() => {}}
           style={styleValue}
         />
       </label>

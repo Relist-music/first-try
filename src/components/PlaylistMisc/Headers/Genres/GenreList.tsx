@@ -8,6 +8,7 @@ import { useGroupUmbrellaGenres } from '@/hooks/grouping';
 import { enrichSubgenre } from '@/utils/enrich';
 
 import SUBGENRES from '@/data/SUBGENRES.json';
+import ShowMoreButton from '@/components/design-system/buttons/showMore';
 
 const GenreList = () => {
   const { countedGenres, useUmbrellaGenres, setUseUmbrellaGenres } =
@@ -81,39 +82,14 @@ const GenreList = () => {
                 />
               ))}
       </div>
-      {hasLotOfGenres && (
-        <div
-          className="my-1 border-2 border-black w-max rounded-md px-2 py-1 cursor-pointer"
-          onClick={() => setShowAllGenres(!showAllGenres)}
-        >
-          {showAllGenres ? (
-            <span className="font-apfel text-red-500 ">Hide low genres</span>
-          ) : (
-            <span className="font-apfel text-red-500">Show all genres</span>
-          )}
-        </div>
-      )}
+      <ShowMoreButton
+        hasLofOfItem={hasLotOfGenres}
+        showAll={showAllGenres}
+        setShowAll={setShowAllGenres}
+        itemName="genres"
+      />
     </div>
   );
 };
-interface Genre {
-  genre: string;
-  count: number;
-  color: string;
-  size: number;
-  top: number;
-  left: number;
-}
-
-interface SubGenre {
-  genre: string;
-  color: string;
-  size: number;
-  top: number;
-  left: number | null;
-  subGenres: Array<{ genre: string }>;
-}
-
-type SubGenreData = Record<string, SubGenre>;
 
 export default GenreList;

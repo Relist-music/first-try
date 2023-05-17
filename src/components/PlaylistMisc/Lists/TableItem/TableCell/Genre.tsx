@@ -1,4 +1,4 @@
-import { use, useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { GenreAggregateV1 } from '@/types/myTypes';
 import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
 import { FilterContext } from '@/components/Playlist';
@@ -8,21 +8,8 @@ export const GenreCell = ({
 }: {
   richGenreTrack: GenreAggregateV1;
 }) => {
-  const {
-    useUmbrellaGenres,
-    umbrellaGenres,
-    filters,
-    setFilters,
-    setUmbrellaGenres,
-  } = useContext(FilterContext);
-
-  useEffect(() => {
-    console.log('filters', filters);
-  }, [filters]);
-
-  useEffect(() => {
-    console.log('umbrellaGenres', umbrellaGenres);
-  }, [umbrellaGenres]);
+  const { useUmbrellaGenres, umbrellaGenres, setFilters, setUmbrellaGenres } =
+    useContext(FilterContext);
 
   if (richGenreTrack.genres.length === 0) {
     return (
@@ -57,6 +44,7 @@ export const GenreCell = ({
               className="underline font-apfel text-gray-600 cursor-pointer hover:text-gray-900"
               key={`${richGenreTrack.trackId}-${groupedGenre}-${index}`}
               onClick={() => {
+                debugger;
                 console.log('clicked');
                 const match = UMBRELLA_WITH_SUBGENRES.find(
                   (g) => g.umbrella === groupedGenre,
@@ -66,18 +54,21 @@ export const GenreCell = ({
                   const inUmbrellaList = umbrellaGenres.includes(
                     match.umbrella,
                   );
-                  if (inUmbrellaList) {
+                  if (!inUmbrellaList) {
                     setFilters((filters) => [...match.subGenres, ...filters]);
                     setUmbrellaGenres((umbrellas) => [
                       match.umbrella,
                       ...umbrellas,
                     ]);
                   } else {
-                    setUmbrellaGenres((umbrellas) =>
-                      umbrellas.filter(
+                    debugger;
+                    setUmbrellaGenres((umbrellas) => {
+                      debugger;
+                      const a = umbrellas.filter(
                         (umbrella) => umbrella !== match.umbrella,
-                      ),
-                    );
+                      );
+                      return a;
+                    });
                     setFilters((filters) =>
                       filters.filter((f) => !match.subGenres.includes(f)),
                     );
