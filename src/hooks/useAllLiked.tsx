@@ -42,7 +42,8 @@ const useAllLiked = () => {
           }),
         )) as GenreAggregateV1[];
         allLikedTracks = [...allLikedTracks, ...newData];
-        nextUrl = savedTrackData.next ?? '';
+        // nextUrl = savedTrackData.next ?? '';
+        nextUrl = '';
       }
       return allLikedTracks;
     },

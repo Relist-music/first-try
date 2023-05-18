@@ -14,6 +14,9 @@ export type FilterContextType = {
   filters: string[];
   setFilters: React.Dispatch<React.SetStateAction<string[]>>;
   //
+  umbrellaGenres: string[];
+  setUmbrellaGenres: React.Dispatch<React.SetStateAction<string[]>>;
+  //
   filteredList: GenreAggregateV1[];
   setFilteredList: React.Dispatch<React.SetStateAction<GenreAggregateV1[]>>;
   //
@@ -31,6 +34,10 @@ export const FilterContext = createContext<FilterContextType>({
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   setFilters: () => {},
 
+  umbrellaGenres: [],
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  setUmbrellaGenres: () => {},
+
   filteredList: [],
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   setFilteredList: () => {},
@@ -46,6 +53,7 @@ export const FilterContext = createContext<FilterContextType>({
 
 const Playlist = ({ list }: { list: GenreAggregateV1[] }) => {
   const [filters, setFilters] = useState<string[]>([]);
+  const [umbrellaGenres, setUmbrellaGenres] = useState<string[]>([]);
   const { countedGenres, setCountedGenres } = useCountedGenres(list);
   const { filteredList, setFilteredList } = useFilterList({ list, filters });
   const [useUmbrellaGenres, setUseUmbrellaGenres] = useState(false);
@@ -54,6 +62,8 @@ const Playlist = ({ list }: { list: GenreAggregateV1[] }) => {
     () => ({
       filters,
       setFilters,
+      umbrellaGenres,
+      setUmbrellaGenres,
       filteredList,
       setFilteredList,
       countedGenres,
@@ -67,6 +77,7 @@ const Playlist = ({ list }: { list: GenreAggregateV1[] }) => {
       filters,
       setCountedGenres,
       setFilteredList,
+      umbrellaGenres,
       useUmbrellaGenres,
     ],
   );
