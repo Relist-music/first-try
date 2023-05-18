@@ -1,9 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay, faCirclePause } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { PlayingContext } from '@/pages/relist';
 
 const PlaylistActions = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const { isPlaying, setIsPlaying, setCurrentAudio, setCurrentPlaylist } =
+    useContext(PlayingContext);
   return (
     <div
       className="text-6xl text-green-400 w-max"

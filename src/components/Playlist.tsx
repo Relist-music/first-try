@@ -1,4 +1,4 @@
-import { createContext, useState, useMemo } from 'react';
+import { createContext, useState } from 'react';
 import { GenreAggregateV1, RelistGenre } from '@/types/myTypes';
 import {
   GenreList,
@@ -58,33 +58,22 @@ const Playlist = ({ list }: { list: GenreAggregateV1[] }) => {
   const { filteredList, setFilteredList } = useFilterList({ list, filters });
   const [useUmbrellaGenres, setUseUmbrellaGenres] = useState(false);
 
-  const contextValue = useMemo(
-    () => ({
-      filters,
-      setFilters,
-      umbrellaGenres,
-      setUmbrellaGenres,
-      filteredList,
-      setFilteredList,
-      countedGenres,
-      setCountedGenres,
-      useUmbrellaGenres,
-      setUseUmbrellaGenres,
-    }),
-    [
-      countedGenres,
-      filteredList,
-      filters,
-      setCountedGenres,
-      setFilteredList,
-      umbrellaGenres,
-      useUmbrellaGenres,
-    ],
-  );
+  const filterContextValue = {
+    filters,
+    setFilters,
+    umbrellaGenres,
+    setUmbrellaGenres,
+    filteredList,
+    setFilteredList,
+    countedGenres,
+    setCountedGenres,
+    useUmbrellaGenres,
+    setUseUmbrellaGenres,
+  };
 
   return (
     <>
-      <FilterContext.Provider value={contextValue}>
+      <FilterContext.Provider value={filterContextValue}>
         <PlaylistHeader
           title="Liked Songs"
           imageUrl="/images/spotify-liked-image.png"

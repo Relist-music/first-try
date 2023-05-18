@@ -1,7 +1,3 @@
-export type Stringify<T> = {
-  [K in keyof T]: string;
-}[keyof T];
-
 export interface GenresGrouping {
   umbrella: string;
   subGenres: string[];
@@ -89,4 +85,18 @@ export interface GenreAggregateV1 {
   };
   added_at: ISODateString;
   duration_ms: number;
+}
+
+export interface Recording {
+  id: string;
+  name: string;
+  artists:
+    | string[]
+    | {
+        id: string;
+        name: string;
+      };
+  images: {
+    url: string;
+  }[];
 }
