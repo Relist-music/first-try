@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import prettyMilliseconds from 'pretty-ms';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faSolidHeart } from '@fortawesome/free-solid-svg-icons';
@@ -11,12 +11,7 @@ const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
       <TableCheckboxCell />
       <td>
         <div className="flex gap-x-2 pb-2">
-          <Image
-            src={richGenreTrack.album.images[1].url}
-            alt={richGenreTrack.album.name}
-            width="72"
-            height="72"
-          />
+          <img src={richGenreTrack.album.images[1].url} alt="" />
           <div>
             <h6 className="font-semibold text-xl">
               {richGenreTrack.trackName}

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const PlaylistHeader = ({
   title,
@@ -8,7 +8,7 @@ const PlaylistHeader = ({
   imageUrl: string;
 }) => (
   <div id="header" className="flex items-end gap-x-2">
-    <Image src={imageUrl} alt="spotify like image" width="120" height="120" />
+    <img src={imageUrl} alt="" />
     <h1 style={{ lineHeight: '120%' }}>{title}</h1>
   </div>
 );
