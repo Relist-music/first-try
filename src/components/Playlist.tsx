@@ -1,5 +1,6 @@
-import { createContext, useState, useMemo } from 'react';
-import { GenreAggregateV1, RelistGenre } from '@/types/myTypes';
+import { useEffect, useState } from 'react';
+import { RelistTrack } from '@/types/myTypes';
+
 import {
   GenreList,
   FilterList,
@@ -9,82 +10,72 @@ import {
 } from '@/components/PlaylistMisc';
 
 import { useCountedGenres, useFilterList } from '@/hooks/filters';
+import { FilteringContext } from '@/contexts/filteringContext';
+import { pickRandomEntries } from '@/utils/pickRandomEntries';
+import fetchRecommandations from '@/services/spotify/fetchRecommandations';
+import { RecommendationsSeedObject } from '@/types/spotify-node-api';
+import { mapRecommendationTrackObjectToGenreAggregate } from '@/utils/mapRecommendationTrackObjectToGenreAggregate';
 
-export type FilterContextType = {
-  filters: string[];
-  setFilters: React.Dispatch<React.SetStateAction<string[]>>;
-  //
-  umbrellaGenres: string[];
-  setUmbrellaGenres: React.Dispatch<React.SetStateAction<string[]>>;
-  //
-  filteredList: GenreAggregateV1[];
-  setFilteredList: React.Dispatch<React.SetStateAction<GenreAggregateV1[]>>;
-  //
-  countedGenres: Pick<RelistGenre, 'name' | 'count'>[];
-  setCountedGenres: React.Dispatch<
-    React.SetStateAction<Pick<RelistGenre, 'name' | 'count'>[]>
-  >;
-  //
-  useUmbrellaGenres: boolean;
-  setUseUmbrellaGenres: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-export const FilterContext = createContext<FilterContextType>({
-  filters: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setFilters: () => {},
-
-  umbrellaGenres: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setUmbrellaGenres: () => {},
-
-  filteredList: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setFilteredList: () => {},
-
-  countedGenres: [] as Pick<RelistGenre, 'name' | 'count'>[],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setCountedGenres: () => {},
-
-  useUmbrellaGenres: false,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setUseUmbrellaGenres: () => {},
-});
-
-const Playlist = ({ list }: { list: GenreAggregateV1[] }) => {
+const Playlist = ({ list }: { list: RelistTrack[] }) => {
   const [filters, setFilters] = useState<string[]>([]);
   const [umbrellaGenres, setUmbrellaGenres] = useState<string[]>([]);
   const { countedGenres, setCountedGenres } = useCountedGenres(list);
   const { filteredList, setFilteredList } = useFilterList({ list, filters });
+  const [recommandationList, setRecommandationList] = useState<RelistTrack[]>(
+    [],
+  );
+  const [recommandationSeeds, setRecommandationSeeds] = useState<
+    RecommendationsSeedObject[]
+  >([]);
   const [useUmbrellaGenres, setUseUmbrellaGenres] = useState(false);
 
-  const contextValue = useMemo(
-    () => ({
-      filters,
-      setFilters,
-      umbrellaGenres,
-      setUmbrellaGenres,
-      filteredList,
-      setFilteredList,
-      countedGenres,
-      setCountedGenres,
-      useUmbrellaGenres,
-      setUseUmbrellaGenres,
-    }),
-    [
-      countedGenres,
-      filteredList,
-      filters,
-      setCountedGenres,
-      setFilteredList,
-      umbrellaGenres,
-      useUmbrellaGenres,
-    ],
-  );
+  const filterContextValue = {
+    filters,
+    setFilters,
+
+    umbrellaGenres,
+    setUmbrellaGenres,
+
+    filteredList,
+    setFilteredList,
+
+    recommandationList,
+    setRecommandationList,
+
+    recommandationSeeds,
+    setRecommandationSeeds,
+
+    countedGenres,
+    setCountedGenres,
+
+    useUmbrellaGenres,
+    setUseUmbrellaGenres,
+  };
+
+  useEffect(() => {
+    (async () => {
+      const selectedAggregates = pickRandomEntries(filteredList, 5);
+      const { tracks, seeds } = await fetchRecommandations({
+        seed_tracks: selectedAggregates
+          .map((aggregate) => aggregate.trackId)
+          .join(','),
+        seed_genres: '',
+        seed_artists: '',
+      });
+      const recommandationListRelist = tracks.map((track, index) =>
+        mapRecommendationTrackObjectToGenreAggregate(track, index),
+      );
+
+      setRecommandationList(recommandationListRelist);
+      setRecommandationSeeds(seeds);
+
+      console.log('here', { tracks, seeds });
+    })();
+  }, [filteredList]);
 
   return (
     <>
-      <FilterContext.Provider value={contextValue}>
+      <FilteringContext.Provider value={filterContextValue}>
         <PlaylistHeader
           title="Liked Songs"
           imageUrl="/images/spotify-liked-image.png"
@@ -97,7 +88,7 @@ const Playlist = ({ list }: { list: GenreAggregateV1[] }) => {
         <PlaylistActions />
         <br />
         <PlaylistListTable />
-      </FilterContext.Provider>
+      </FilteringContext.Provider>
     </>
   );
 };

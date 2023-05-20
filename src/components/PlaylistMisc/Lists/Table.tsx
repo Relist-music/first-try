@@ -1,25 +1,25 @@
-import { FilterContext } from '@/components/Playlist';
-import { useContext } from 'react';
-import { GenreAggregateV1 } from '@/types/myTypes';
+import { useContext, useEffect } from 'react';
+import { RelistTrack } from '@/types/myTypes';
 import { TableRow } from './TableItem';
 import { TableCheckboxCell } from './TableItem/TableCell';
 import { Switch } from '@headlessui/react';
+import { FilteringContext } from '@/contexts/filteringContext';
+import { mapRecommendationTrackObjectToGenreAggregate } from '@/utils/mapRecommendationTrackObjectToGenreAggregate';
 
 const TableHead = () => {
-  const { useUmbrellaGenres, setUseUmbrellaGenres } = useContext(FilterContext);
-
+  const { useUmbrellaGenres, setUseUmbrellaGenres } =
+    useContext(FilteringContext);
   return (
     <thead>
       <tr>
-        <TableCheckboxCell />
+        {/* //TODO: add way to check all or uncheck all */}
+        {/* eslint-disable-next-line @typescript-eslint/no-empty-function */}
+        <TableCheckboxCell selected={false} setSelected={() => {}} />
         <th className="pb-2 text-left uppercase px-0">
           Title
           <hr />
         </th>
-        <th
-          className="pb-2  text-left uppercase max-w-[60rem]"
-          // style={{ maxWidth: '100px' }}
-        >
+        <th className="pb-2  text-left uppercase max-w-[60rem]">
           Genres
           <Switch
             checked={useUmbrellaGenres}
@@ -47,18 +47,42 @@ const TableHead = () => {
 };
 
 const Table = () => {
-  const { filteredList } = useContext(FilterContext);
+  const { filteredList, recommandationList } = useContext(FilteringContext);
+  useEffect(() => {
+    console.log(
+      'recommandationList',
+      recommandationList.length,
+      recommandationList.length > 0,
+    );
+  }, [recommandationList]);
+
   return (
     <table className="table-auto">
       <TableHead />
       <tbody>
-        {filteredList.map((richGenreTrack: GenreAggregateV1) => (
+        {filteredList.map((richGenreTrack: RelistTrack) => (
           <TableRow
             key={richGenreTrack.trackId}
             richGenreTrack={richGenreTrack}
           />
         ))}
       </tbody>
+      {recommandationList.length > 0 && (
+        <>
+          <thead>
+            <tr>Recommandations</tr>
+          </thead>
+          <tbody>
+            {recommandationList.map((track) => (
+              <TableRow
+                key={track.trackId}
+                richGenreTrack={track}
+                isRecommandation={true}
+              />
+            ))}
+          </tbody>
+        </>
+      )}
     </table>
   );
 };

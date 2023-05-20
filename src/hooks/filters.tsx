@@ -1,19 +1,19 @@
-import { GenreAggregateV1, RelistGenre } from '@/types/myTypes';
+import { RelistTrack, RelistGenre } from '@/types/myTypes';
 import { useEffect, useState } from 'react';
 
 export const useFilterList = ({
   list,
   filters,
 }: {
-  list: GenreAggregateV1[];
+  list: RelistTrack[];
   filters: string[];
 }) => {
-  const [filteredList, setFilteredList] = useState<GenreAggregateV1[]>(list);
+  const [filteredList, setFilteredList] = useState<RelistTrack[]>(list);
 
   // this is a loose filter
   useEffect(() => {
     setFilteredList([
-      ...list.filter((richGenreTrack: GenreAggregateV1) => {
+      ...list.filter((richGenreTrack: RelistTrack) => {
         if (filters.length === 0) return true;
         return filters.some((filter) => richGenreTrack.genres.includes(filter));
       }),
@@ -23,7 +23,7 @@ export const useFilterList = ({
   return { filteredList, setFilteredList };
 };
 
-export const useCountedGenres = (filteredList: GenreAggregateV1[]) => {
+export const useCountedGenres = (filteredList: RelistTrack[]) => {
   const [countedGenres, setCountedGenres] = useState<
     Pick<RelistGenre, 'name' | 'count'>[]
   >([] as Pick<RelistGenre, 'name' | 'count'>[]);
@@ -32,7 +32,7 @@ export const useCountedGenres = (filteredList: GenreAggregateV1[]) => {
     const genresOverall = filteredList.reduce(
       (
         acc: Pick<RelistGenre, 'name' | 'count'>[],
-        item: GenreAggregateV1,
+        item: RelistTrack,
       ): Pick<RelistGenre, 'name' | 'count'>[] => {
         item.genres.forEach((genreName) => {
           const entry = acc.find((entry) => entry.name === genreName);

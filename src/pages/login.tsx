@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import { scopes } from '@/constants/scopes';
 import queryString from 'query-string';
+// TODO:  WARN  deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
 // import { printLocalStorage } from '@/services/localStorage';
 
 function RedirectToAuthorizeUrl() {

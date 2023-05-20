@@ -1,6 +1,4 @@
-export type Stringify<T> = {
-  [K in keyof T]: string;
-}[keyof T];
+import { ImageObject } from 'spotif-node-api';
 
 export interface GenresGrouping {
   umbrella: string;
@@ -72,21 +70,40 @@ interface usefullArtist {
   genres: ExtendedGenre | string[];
 }
 
-export interface GenreAggregateV1 {
+export interface RelistTrack {
+  indexInList: number;
   trackId: string;
   trackName: string;
   trackArtists: usefullArtist[];
+  trackUri: string;
   genres: string[];
   haveMultipleArtists: boolean;
   isrc: string;
   album: {
     name: string;
-    images: {
-      height: number;
-      width: number;
-      url: string;
-    }[];
+    images:
+      | {
+          height: number;
+          width: number;
+          url: string;
+        }[]
+      | ImageObject;
   };
   added_at: ISODateString;
   duration_ms: number;
+  list: string | 'liked' | 'recommandation';
+}
+
+export interface Recording {
+  id: string;
+  name: string;
+  artists:
+    | string[]
+    | {
+        id: string;
+        name: string;
+      };
+  images: {
+    url: string;
+  }[];
 }
