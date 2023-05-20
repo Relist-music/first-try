@@ -1,0 +1,354 @@
+{
+  "timestamp": 1684517277382,
+  "context": {
+    "uri": "spotify:playlist:37i9dQZF1E37JPjWDSqtfO",
+    "metadata": {
+      "name": "Daily Mix 2",
+      "uri": "spotify:playlist:37i9dQZF1E37JPjWDSqtfO",
+      "url": "context://spotify:playlist:37i9dQZF1E37JPjWDSqtfO",
+      "current_item": {
+        "name": "Shadowboxin'",
+        "uri": "spotify:track:7bp5DfkdK1OAvNJ1U4HfDA",
+        "url": "https://api.spotify.com/v1/tracks/7bp5DfkdK1OAvNJ1U4HfDA",
+        "uid": "36633731623633323264663633643431323561656639646438336261343363323962336466613432",
+        "content_type": "TRACK",
+        "artists": [
+          {
+            "name": "GZA",
+            "uri": "spotify:artist:6ns6XAOsw4B0nDUIovAOUO",
+            "url": "https://api.spotify.com/v1/artists/6ns6XAOsw4B0nDUIovAOUO"
+          },
+          {
+            "name": "Method Man",
+            "uri": "spotify:artist:4VmEWwd8y9MCLwexFMdpwt",
+            "url": "https://api.spotify.com/v1/artists/4VmEWwd8y9MCLwexFMdpwt"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0284b6abc19fb31fb382378bbc",
+            "height": 300,
+            "width": 300,
+            "size": "UNKNOWN"
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485184b6abc19fb31fb382378bbc",
+            "height": 64,
+            "width": 64,
+            "size": "SMALL"
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27384b6abc19fb31fb382378bbc",
+            "height": 640,
+            "width": 640,
+            "size": "LARGE"
+          }
+        ],
+        "estimated_duration": 209973,
+        "group": {
+          "name": "Liquid Swords",
+          "uri": "spotify:album:3k8xoyOXkGgZxUKgpmxz4P",
+          "url": "https://api.spotify.com/v1/albums/3k8xoyOXkGgZxUKgpmxz4P"
+        }
+      },
+      "previous_items": [],
+      "next_items": [
+        {
+          "name": "16",
+          "uri": "spotify:track:1Is8hGpkGMiePASAxBluxM",
+          "url": "https://api.spotify.com/v1/tracks/1Is8hGpkGMiePASAxBluxM",
+          "uid": "32636234343836343132323566663265613366616537646262336161373133666266303661636336",
+          "content_type": "TRACK",
+          "artists": [
+            {
+              "name": "Baby Keem",
+              "uri": "spotify:artist:5SXuuuRpukkTvsLuUknva1",
+              "url": "https://api.spotify.com/v1/artists/5SXuuuRpukkTvsLuUknva1"
+            }
+          ],
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e021bfa23b13d0504fb90c37b39",
+              "height": 300,
+              "width": 300,
+              "size": "UNKNOWN"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048511bfa23b13d0504fb90c37b39",
+              "height": 64,
+              "width": 64,
+              "size": "SMALL"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2731bfa23b13d0504fb90c37b39",
+              "height": 640,
+              "width": 640,
+              "size": "LARGE"
+            }
+          ],
+          "estimated_duration": 156040,
+          "group": {
+            "name": "The Melodic Blue",
+            "uri": "spotify:album:3r46DPIQeBQbjvjjV5mXGg",
+            "url": "https://api.spotify.com/v1/albums/3r46DPIQeBQbjvjjV5mXGg"
+          }
+        },
+        {
+          "name": "Homecoming",
+          "uri": "spotify:track:4iz9lGMjU1lXS51oPmUmTe",
+          "url": "https://api.spotify.com/v1/tracks/4iz9lGMjU1lXS51oPmUmTe",
+          "uid": "37626465373935303864373232323830343430323634336664663161373264333039363436633239",
+          "content_type": "TRACK",
+          "artists": [
+            {
+              "name": "Kanye West",
+              "uri": "spotify:artist:5K4W6rqBFWDnAN6FQUkS6x",
+              "url": "https://api.spotify.com/v1/artists/5K4W6rqBFWDnAN6FQUkS6x"
+            },
+            {
+              "name": "Chris Martin",
+              "uri": "spotify:artist:0LQoZQIV0mIs0y0XQb0Sw2",
+              "url": "https://api.spotify.com/v1/artists/0LQoZQIV0mIs0y0XQb0Sw2"
+            }
+          ],
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e0226f7f19c7f0381e56156c94a",
+              "height": 300,
+              "width": 300,
+              "size": "UNKNOWN"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000485126f7f19c7f0381e56156c94a",
+              "height": 64,
+              "width": 64,
+              "size": "SMALL"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b27326f7f19c7f0381e56156c94a",
+              "height": 640,
+              "width": 640,
+              "size": "LARGE"
+            }
+          ],
+          "estimated_duration": 203493,
+          "group": {
+            "name": "Graduation",
+            "uri": "spotify:album:4SZko61aMnmgvNhfhgTuD3",
+            "url": "https://api.spotify.com/v1/albums/4SZko61aMnmgvNhfhgTuD3"
+          }
+        }
+      ],
+      "options": {
+        "shuffled": true,
+        "repeat_mode": "OFF"
+      },
+      "restrictions": {
+        "pause": [],
+        "resume": [],
+        "seek": [],
+        "skip_next": [],
+        "skip_prev": [
+          "no_prev_track"
+        ],
+        "toggle_repeat_context": [],
+        "toggle_repeat_track": [],
+        "toggle_shuffle": [],
+        "peek_next": [],
+        "peek_prev": []
+      },
+      "context_description": "Daily Mix 2"
+    }
+  },
+  "duration": 210020,
+  "paused": false,
+  "shuffle": true,
+  "position": 137698,
+  "loading": false,
+  "repeat_mode": 0,
+  "track_window": {
+    "current_track": {
+      "id": "7bp5DfkdK1OAvNJ1U4HfDA",
+      "uri": "spotify:track:7bp5DfkdK1OAvNJ1U4HfDA",
+      "type": "track",
+      "uid": "36633731623633323264663633643431323561656639646438336261343363323962336466613432",
+      "linked_from": {
+        "uri": null,
+        "id": null
+      },
+      "media_type": "audio",
+      "track_type": "audio",
+      "name": "Shadowboxin'",
+      "duration_ms": 210020,
+      "artists": [
+        {
+          "name": "GZA",
+          "uri": "spotify:artist:6ns6XAOsw4B0nDUIovAOUO",
+          "url": "https://api.spotify.com/v1/artists/6ns6XAOsw4B0nDUIovAOUO"
+        },
+        {
+          "name": "Method Man",
+          "uri": "spotify:artist:4VmEWwd8y9MCLwexFMdpwt",
+          "url": "https://api.spotify.com/v1/artists/4VmEWwd8y9MCLwexFMdpwt"
+        }
+      ],
+      "album": {
+        "name": "Liquid Swords",
+        "uri": "spotify:album:3k8xoyOXkGgZxUKgpmxz4P",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e0284b6abc19fb31fb382378bbc",
+            "height": 300,
+            "width": 300,
+            "size": "UNKNOWN"
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485184b6abc19fb31fb382378bbc",
+            "height": 64,
+            "width": 64,
+            "size": "SMALL"
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b27384b6abc19fb31fb382378bbc",
+            "height": 640,
+            "width": 640,
+            "size": "LARGE"
+          }
+        ]
+      },
+      "is_playable": true
+    },
+    "next_tracks": [
+      {
+        "id": "1Is8hGpkGMiePASAxBluxM",
+        "uri": "spotify:track:1Is8hGpkGMiePASAxBluxM",
+        "type": "track",
+        "uid": "32636234343836343132323566663265613366616537646262336161373133666266303661636336",
+        "linked_from": {
+          "uri": null,
+          "id": null
+        },
+        "media_type": "video",
+        "track_type": "video",
+        "name": "16",
+        "duration_ms": 156040,
+        "artists": [
+          {
+            "name": "Baby Keem",
+            "uri": "spotify:artist:5SXuuuRpukkTvsLuUknva1",
+            "url": "https://api.spotify.com/v1/artists/5SXuuuRpukkTvsLuUknva1"
+          }
+        ],
+        "album": {
+          "name": "The Melodic Blue",
+          "uri": "spotify:album:3r46DPIQeBQbjvjjV5mXGg",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e021bfa23b13d0504fb90c37b39",
+              "height": 300,
+              "width": 300,
+              "size": "UNKNOWN"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048511bfa23b13d0504fb90c37b39",
+              "height": 64,
+              "width": 64,
+              "size": "SMALL"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2731bfa23b13d0504fb90c37b39",
+              "height": 640,
+              "width": 640,
+              "size": "LARGE"
+            }
+          ]
+        },
+        "is_playable": true
+      },
+      {
+        "id": "4iz9lGMjU1lXS51oPmUmTe",
+        "uri": "spotify:track:4iz9lGMjU1lXS51oPmUmTe",
+        "type": "track",
+        "uid": "37626465373935303864373232323830343430323634336664663161373264333039363436633239",
+        "linked_from": {
+          "uri": null,
+          "id": null
+        },
+        "media_type": "video",
+        "track_type": "video",
+        "name": "Homecoming",
+        "duration_ms": 203493,
+        "artists": [
+          {
+            "name": "Kanye West",
+            "uri": "spotify:artist:5K4W6rqBFWDnAN6FQUkS6x",
+            "url": "https://api.spotify.com/v1/artists/5K4W6rqBFWDnAN6FQUkS6x"
+          },
+          {
+            "name": "Chris Martin",
+            "uri": "spotify:artist:0LQoZQIV0mIs0y0XQb0Sw2",
+            "url": "https://api.spotify.com/v1/artists/0LQoZQIV0mIs0y0XQb0Sw2"
+          }
+        ],
+        "album": {
+          "name": "Graduation",
+          "uri": "spotify:album:4SZko61aMnmgvNhfhgTuD3",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e0226f7f19c7f0381e56156c94a",
+              "height": 300,
+              "width": 300,
+              "size": "UNKNOWN"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000485126f7f19c7f0381e56156c94a",
+              "height": 64,
+              "width": 64,
+              "size": "SMALL"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b27326f7f19c7f0381e56156c94a",
+              "height": 640,
+              "width": 640,
+              "size": "LARGE"
+            }
+          ]
+        },
+        "is_playable": true
+      }
+    ],
+    "previous_tracks": []
+  },
+  "restrictions": {
+    "disallow_seeking_reasons": [],
+    "disallow_skipping_next_reasons": [],
+    "disallow_skipping_prev_reasons": [
+      "no_prev_track"
+    ],
+    "disallow_toggling_repeat_context_reasons": [],
+    "disallow_toggling_repeat_track_reasons": [],
+    "disallow_toggling_shuffle_reasons": [],
+    "disallow_peeking_next_reasons": [],
+    "disallow_peeking_prev_reasons": [],
+    "disallow_resuming_reasons": [
+      "not_paused"
+    ]
+  },
+  "disallows": {
+    "seeking": false,
+    "skipping_next": false,
+    "skipping_prev": true,
+    "toggling_repeat_context": false,
+    "toggling_repeat_track": false,
+    "toggling_shuffle": false,
+    "peeking_next": false,
+    "peeking_prev": false,
+    "resuming": true
+  },
+  "playback_id": "7a6ef37e5142bd749e6db78e7255d911",
+  "playback_quality": "VERY_HIGH",
+  "playback_features": {
+    "hifi_status": "NONE"
+  },
+  "playback_speed": 1
+}

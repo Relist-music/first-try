@@ -2,28 +2,8 @@ import useAllLiked from '@/hooks/useAllLiked';
 import Playlist from '@/components/Playlist';
 import Player from '@/components/Player/Player';
 import { Recording } from '@/types/myTypes';
-import { createContext, useState } from 'react';
-
-export type PlayingContextType = {
-  currentAudio: Spotify.Track | null;
-  setCurrentAudio: React.Dispatch<React.SetStateAction<Spotify.Track | null>>;
-  currentPlaylist: Recording[] | null;
-  setCurrentPlaylist: React.Dispatch<React.SetStateAction<Recording[] | null>>;
-  isPlaying: boolean;
-  setIsPlaying: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-export const PlayingContext = createContext<PlayingContextType>({
-  currentAudio: null,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setCurrentAudio: () => {},
-  currentPlaylist: null,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setCurrentPlaylist: () => {},
-  isPlaying: false,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setIsPlaying: () => {},
-});
+import { useState } from 'react';
+import { PlayingContext } from '@/contexts/PlayingContext';
 
 const Relist = () => {
   const { liked, isLoading } = useAllLiked();
@@ -32,6 +12,7 @@ const Relist = () => {
     null,
   );
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [deviceId, setDeviceId] = useState<string | null>(null);
 
   const PlayingContextValue = {
     currentAudio,
@@ -40,6 +21,8 @@ const Relist = () => {
     setCurrentPlaylist,
     isPlaying,
     setIsPlaying,
+    deviceId,
+    setDeviceId,
   };
 
   return (

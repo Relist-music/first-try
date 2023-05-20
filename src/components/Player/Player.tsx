@@ -8,7 +8,7 @@ import {
   faCirclePlay,
   faCirclePause,
 } from '@fortawesome/free-solid-svg-icons';
-import { PlayingContext } from '@/pages/relist';
+import { PlayingContext } from '@/contexts/PlayingContext';
 
 const Player = () => {
   const {
@@ -17,14 +17,16 @@ const Player = () => {
     currentAudio,
     setCurrentAudio,
     setCurrentPlaylist,
+    deviceId,
+    setDeviceId,
   } = useContext(PlayingContext);
   // idk what active means
   const [isActive, setIsActive] = useState<boolean>(false);
   // weird way to do this, i think a ref is better
   //const [player, setPlayer] = useState<Spotify.Player | undefined>(undefined);
   const [player, setPlayer] = useState<Spotify.Player | null>(null);
+  const tokenRef = React.useRef<string>('');
 
-  let token = '';
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://sdk.scdn.co/spotify-player.js';
@@ -32,12 +34,13 @@ const Player = () => {
 
     document.body.appendChild(script);
 
-    token = localStorage.getItem('access_token') ?? '';
+    tokenRef.current = localStorage.getItem('access_token') ?? '';
+
     window.onSpotifyWebPlaybackSDKReady = () => {
       const player = new window.Spotify.Player({
-        name: 'Web Playback SDK',
+        name: 'Relist Player',
         getOAuthToken: (cb) => {
-          cb(token ?? '');
+          cb(tokenRef.current ?? '');
         },
         volume: 0.5,
       });
@@ -46,41 +49,59 @@ const Player = () => {
 
       player.addListener('ready', ({ device_id }) => {
         console.log('Ready with Device ID', device_id);
+        setDeviceId(device_id);
       });
 
       player.addListener('not_ready', ({ device_id }) => {
         console.log('Device ID has gone offline', device_id);
+        setDeviceId(null);
       });
 
-      player.addListener('player_state_changed', (state) => {
-        if (!state) {
-          return;
-        }
-
-        setCurrentAudio(state.track_window.current_track);
-        setIsActive(state.paused);
-
-        player.getCurrentState().then((state) => {
+      player.addListener(
+        'player_state_changed',
+        (state: Spotify.PlaybackState) => {
           if (!state) {
-            setIsActive(false);
-          } else {
-            setIsActive(true);
+            return;
           }
-        });
-      });
+          console.log('state_changed', state);
+          setCurrentAudio(state.track_window.current_track);
+          setIsActive(state.paused);
+
+          player.getCurrentState().then((state) => {
+            console.log('getCurrentState', state);
+            if (!state) {
+              setIsActive(false);
+            } else {
+              setIsActive(true);
+            }
+          });
+        },
+      );
 
       player.connect();
     };
-  }, [token]);
+  }, [setCurrentAudio, setDeviceId]);
 
   useEffect(() => {
-    console.log('player', player);
-  });
+    async function transferPlayback() {
+      await fetch('https://api.spotify.com/v1/me/player', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: 'Bearer ' + tokenRef.current,
+        },
+        body: JSON.stringify({
+          device_ids: [deviceId],
+          play: true,
+        }),
+      });
+    }
 
-  function togglePlay() {
-    setIsPlaying((playing) => !playing);
-    player?.togglePlay();
-  }
+    if (deviceId) {
+      transferPlayback();
+    }
+  }, [deviceId]);
+
   if (!player) {
     return (
       <>
@@ -117,14 +138,27 @@ const Player = () => {
           />
         )}
         <FontAwesomeIcon icon={faShuffle} color={'#545454'} />
-        <FontAwesomeIcon icon={faBackwardStep} />
-
         <FontAwesomeIcon
-          onClick={togglePlay}
-          icon={isPlaying ? faCirclePlay : faCirclePause}
+          onClick={() => {
+            player.previousTrack();
+          }}
+          icon={faBackwardStep}
         />
 
-        <FontAwesomeIcon icon={faForwardStep} />
+        <FontAwesomeIcon
+          onClick={() => {
+            player.togglePlay();
+            setIsPlaying(!isPlaying);
+          }}
+          icon={isPlaying ? faCirclePause : faCirclePlay}
+        />
+
+        <FontAwesomeIcon
+          onClick={() => {
+            player.nextTrack();
+          }}
+          icon={faForwardStep}
+        />
         <FontAwesomeIcon icon={faRepeat} color={'#545454'} />
       </div>
     );

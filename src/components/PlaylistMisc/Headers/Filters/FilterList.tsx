@@ -1,10 +1,10 @@
-import { FilterContext } from '@/components/Playlist';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useState } from 'react';
 import { faCircleXmark as faCircleXmarkOutline } from '@fortawesome/free-regular-svg-icons';
 import ShowMoreButton from '@/components/design-system/buttons/ShowMore';
 import { mapUmbrellaToSubgenres } from '@/utils/grouping';
 import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
+import { FilterContext } from '@/contexts/filteringContext';
 
 const FilterList = () => {
   const { umbrellaGenres, setUmbrellaGenres, filters, setFilters } =

@@ -1,5 +1,5 @@
-import { createContext, useState } from 'react';
-import { GenreAggregateV1, RelistGenre } from '@/types/myTypes';
+import { useState } from 'react';
+import { GenreAggregateV1 } from '@/types/myTypes';
 import {
   GenreList,
   FilterList,
@@ -9,47 +9,7 @@ import {
 } from '@/components/PlaylistMisc';
 
 import { useCountedGenres, useFilterList } from '@/hooks/filters';
-
-export type FilterContextType = {
-  filters: string[];
-  setFilters: React.Dispatch<React.SetStateAction<string[]>>;
-  //
-  umbrellaGenres: string[];
-  setUmbrellaGenres: React.Dispatch<React.SetStateAction<string[]>>;
-  //
-  filteredList: GenreAggregateV1[];
-  setFilteredList: React.Dispatch<React.SetStateAction<GenreAggregateV1[]>>;
-  //
-  countedGenres: Pick<RelistGenre, 'name' | 'count'>[];
-  setCountedGenres: React.Dispatch<
-    React.SetStateAction<Pick<RelistGenre, 'name' | 'count'>[]>
-  >;
-  //
-  useUmbrellaGenres: boolean;
-  setUseUmbrellaGenres: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-export const FilterContext = createContext<FilterContextType>({
-  filters: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setFilters: () => {},
-
-  umbrellaGenres: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setUmbrellaGenres: () => {},
-
-  filteredList: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setFilteredList: () => {},
-
-  countedGenres: [] as Pick<RelistGenre, 'name' | 'count'>[],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setCountedGenres: () => {},
-
-  useUmbrellaGenres: false,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  setUseUmbrellaGenres: () => {},
-});
+import { FilterContext } from '@/contexts/filteringContext';
 
 const Playlist = ({ list }: { list: GenreAggregateV1[] }) => {
   const [filters, setFilters] = useState<string[]>([]);

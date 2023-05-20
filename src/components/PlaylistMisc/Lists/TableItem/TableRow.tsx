@@ -7,7 +7,13 @@ import { TableCheckboxCell, TableGenreCell } from './TableCell';
 
 const TableRow = ({ richGenreTrack }: { richGenreTrack: GenreAggregateV1 }) => {
   return (
-    <tr key={richGenreTrack.trackId}>
+    <tr
+      key={richGenreTrack.trackId}
+      className="hover:bg-gray-100 cursor-pointer"
+      onClick={() => {
+        console.log('row clicked');
+      }}
+    >
       <TableCheckboxCell />
       <td>
         <div className="flex gap-x-2 pb-2">

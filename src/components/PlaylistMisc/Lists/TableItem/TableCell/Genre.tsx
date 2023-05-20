@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { GenreAggregateV1 } from '@/types/myTypes';
 import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
-import { FilterContext } from '@/components/Playlist';
+import { FilterContext } from '@/contexts/filteringContext';
 
 export const GenreCell = ({
   richGenreTrack,

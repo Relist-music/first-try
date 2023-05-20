@@ -1,9 +1,9 @@
-import { FilterContext } from '@/components/Playlist';
 import { useContext } from 'react';
 import { GenreAggregateV1 } from '@/types/myTypes';
 import { TableRow } from './TableItem';
 import { TableCheckboxCell } from './TableItem/TableCell';
 import { Switch } from '@headlessui/react';
+import { FilterContext } from '@/contexts/filteringContext';
 
 const TableHead = () => {
   const { useUmbrellaGenres, setUseUmbrellaGenres } = useContext(FilterContext);

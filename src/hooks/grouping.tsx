@@ -1,10 +1,10 @@
-import { FilterContext } from '@/components/Playlist';
 import { RelistGenre } from '@/types/myTypes';
 import { useContext, useEffect, useState } from 'react';
 import { groupGenre } from '@/utils/grouping';
 
 import UMBRELLA_GENRES from '@/data/UMBRELLA_GENRES.json';
 import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
+import { FilterContext } from '@/contexts/filteringContext';
 
 export const useGroupUmbrellaGenres = () => {
   const { countedGenres, useUmbrellaGenres } = useContext(FilterContext);

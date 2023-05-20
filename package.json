@@ -11,7 +11,7 @@
     "typescript"
   ],
   "scripts": {
-    "dev": "next",
+    "dev": "next -H 127.0.0.1",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --noEmit",
