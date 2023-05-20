@@ -1,11 +1,11 @@
 import fetchArtists from '@/services/spotify/fetchArtists';
 import { getSpotify } from '@/services/spotify/getSpotify';
-import { GenreAggregateV1 } from '@/types/myTypes';
+import { RelistTrack } from '@/types/myTypes';
 import { PagingObject, SavedTrackObject } from '@/types/spotify-node-api';
 import { useQuery } from '@tanstack/react-query';
 
 const useAllLiked = () => {
-  const { data: liked, isLoading } = useQuery<GenreAggregateV1[]>(
+  const { data: liked, isLoading } = useQuery<RelistTrack[]>(
     ['likedTracks'],
     async () => {
       let allLikedTracks = [] as any;
@@ -17,13 +17,16 @@ const useAllLiked = () => {
           },
         );
         const newData = (await Promise.all(
-          savedTrackData.items.map(async (item) => {
+          savedTrackData.items.map(async (item, index) => {
+            console.log('here', item, item.track.uri);
             const { artists: fetchedArtists } = await fetchArtists({
               artistIds: item.track.artists.map((artist) => artist.id),
             });
             return {
+              indexInList: index,
               trackId: item.track.id,
               trackName: item.track.name,
+              trackUri: item.track.uri,
               trackArtists: fetchedArtists.map((artist) => ({
                 id: artist.id,
                 name: artist.name,
@@ -38,9 +41,10 @@ const useAllLiked = () => {
               },
               added_at: item.added_at,
               duration_ms: item.track.duration_ms,
+              list: 'liked',
             };
           }),
-        )) as GenreAggregateV1[];
+        )) as RelistTrack[];
         allLikedTracks = [...allLikedTracks, ...newData];
         // nextUrl = savedTrackData.next ?? '';
         nextUrl = '';

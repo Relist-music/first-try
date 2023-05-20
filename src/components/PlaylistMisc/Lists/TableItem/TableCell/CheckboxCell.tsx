@@ -1,8 +1,13 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { useHover } from '@/hooks/useHover';
 
-const TableCellCheckbox = () => {
-  const [selected, setSelected] = useState(false);
+const TableCellCheckbox = ({
+  selected,
+  setSelected,
+}: {
+  selected: boolean;
+  setSelected: Dispatch<SetStateAction<boolean>> | (() => void);
+}) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
 
   const styleValue = selected

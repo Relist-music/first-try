@@ -1,15 +1,15 @@
 import { useContext } from 'react';
-import { GenreAggregateV1 } from '@/types/myTypes';
+import { RelistTrack } from '@/types/myTypes';
 import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
-import { FilterContext } from '@/contexts/filteringContext';
+import { FilteringContext } from '@/contexts/filteringContext';
 
 export const GenreCell = ({
   richGenreTrack,
 }: {
-  richGenreTrack: GenreAggregateV1;
+  richGenreTrack: RelistTrack;
 }) => {
   const { useUmbrellaGenres, umbrellaGenres, setFilters, setUmbrellaGenres } =
-    useContext(FilterContext);
+    useContext(FilteringContext);
 
   if (richGenreTrack.genres.length === 0) {
     return (

@@ -66,6 +66,7 @@ const Player = () => {
           console.log('state_changed', state);
           setCurrentAudio(state.track_window.current_track);
           setIsActive(state.paused);
+          setIsPlaying(!state.paused);
 
           player.getCurrentState().then((state) => {
             console.log('getCurrentState', state);
@@ -148,7 +149,6 @@ const Player = () => {
         <FontAwesomeIcon
           onClick={() => {
             player.togglePlay();
-            setIsPlaying(!isPlaying);
           }}
           icon={isPlaying ? faCirclePause : faCirclePlay}
         />

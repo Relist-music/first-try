@@ -8,11 +8,11 @@ import { enrichSubgenre } from '@/utils/enrich';
 
 import SUBGENRES from '@/data/SUBGENRES.json';
 import ShowMoreButton from '@/components/design-system/buttons/ShowMore';
-import { FilterContext } from '@/contexts/filteringContext';
+import { FilteringContext } from '@/contexts/filteringContext';
 
 const GenreList = () => {
   const { countedGenres, useUmbrellaGenres, setUseUmbrellaGenres } =
-    useContext(FilterContext);
+    useContext(FilteringContext);
 
   const [showAllGenres, setShowAllGenres] = useState(false);
   const hasLotOfGenres = countedGenres.length > 10;

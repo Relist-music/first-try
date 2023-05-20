@@ -17,10 +17,13 @@ const Relist = () => {
   const PlayingContextValue = {
     currentAudio,
     setCurrentAudio,
+
     currentPlaylist,
     setCurrentPlaylist,
+
     isPlaying,
     setIsPlaying,
+
     deviceId,
     setDeviceId,
   };

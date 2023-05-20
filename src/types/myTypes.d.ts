@@ -1,3 +1,5 @@
+import { ImageObject } from 'spotif-node-api';
+
 export interface GenresGrouping {
   umbrella: string;
   subGenres: string[];
@@ -68,23 +70,28 @@ interface usefullArtist {
   genres: ExtendedGenre | string[];
 }
 
-export interface GenreAggregateV1 {
+export interface RelistTrack {
+  indexInList: number;
   trackId: string;
   trackName: string;
   trackArtists: usefullArtist[];
+  trackUri: string;
   genres: string[];
   haveMultipleArtists: boolean;
   isrc: string;
   album: {
     name: string;
-    images: {
-      height: number;
-      width: number;
-      url: string;
-    }[];
+    images:
+      | {
+          height: number;
+          width: number;
+          url: string;
+        }[]
+      | ImageObject;
   };
   added_at: ISODateString;
   duration_ms: number;
+  list: string | 'liked' | 'recommandation';
 }
 
 export interface Recording {
