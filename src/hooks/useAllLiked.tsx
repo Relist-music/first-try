@@ -18,7 +18,6 @@ const useAllLiked = () => {
         );
         const newData = (await Promise.all(
           savedTrackData.items.map(async (item, index) => {
-            console.log('here', item, item.track.uri);
             const { artists: fetchedArtists } = await fetchArtists({
               artistIds: item.track.artists.map((artist) => artist.id),
             });

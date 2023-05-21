@@ -44,8 +44,6 @@ export const GenreCell = ({
               className="underline font-apfel text-gray-600 cursor-pointer hover:text-gray-900"
               key={`${richGenreTrack.trackId}-${groupedGenre}-${index}`}
               onClick={() => {
-                debugger;
-                console.log('clicked');
                 const match = UMBRELLA_WITH_SUBGENRES.find(
                   (g) => g.umbrella === groupedGenre,
                 );

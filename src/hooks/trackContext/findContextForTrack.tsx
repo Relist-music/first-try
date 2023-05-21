@@ -9,7 +9,6 @@ const useFindlikedContextForTrack = ({ track }: { track: RelistTrack }) => {
     (x) => x.indexInList === indexInList,
   );
   if (isInFilteredList) {
-    console.log('sliced', filteredList.slice(indexInList));
     return {
       uris: [...filteredList.slice(indexInList).map((track) => track.trackUri)],
       wasFound: true,

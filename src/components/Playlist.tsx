@@ -68,8 +68,6 @@ const Playlist = ({ list }: { list: RelistTrack[] }) => {
 
       setRecommandationList(recommandationListRelist);
       setRecommandationSeeds(seeds);
-
-      console.log('here', { tracks, seeds });
     })();
   }, [filteredList]);
 
