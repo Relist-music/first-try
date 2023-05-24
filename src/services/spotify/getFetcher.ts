@@ -10,6 +10,9 @@ export async function getWithBackoffRetry({
   let retries = 0;
   let response: Response | undefined;
 
+  // here check if the token is expired and refresh it
+  // then swap
+
   while (retries <= maxRetries) {
     try {
       response = await fetch(url, {
