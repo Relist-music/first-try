@@ -1,10 +1,10 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { RelistTrack } from '@/types/myTypes';
 import { TableRow } from './TableItem';
 import { TableCheckboxCell } from './TableItem/TableCell';
 import { Switch } from '@headlessui/react';
-import { FilteringContext } from '@/contexts/filteringContext';
-import { mapRecommendationTrackObjectToGenreAggregate } from '@/utils/mapRecommendationTrackObjectToGenreAggregate';
+import { FilteringContext } from '@/contexts/FilteringContext';
+import { Recommandations } from '../Recommandations/Recommandations';
 
 const TableHead = () => {
   const { useUmbrellaGenres, setUseUmbrellaGenres } =
@@ -47,42 +47,16 @@ const TableHead = () => {
 };
 
 const Table = () => {
-  const { filteredList, recommandationList } = useContext(FilteringContext);
-  useEffect(() => {
-    console.log(
-      'recommandationList',
-      recommandationList.length,
-      recommandationList.length > 0,
-    );
-  }, [recommandationList]);
+  const { filteredList } = useContext(FilteringContext);
 
   return (
     <table className="table-auto">
       <TableHead />
       <tbody>
-        {filteredList.map((richGenreTrack: RelistTrack) => (
-          <TableRow
-            key={richGenreTrack.trackId}
-            richGenreTrack={richGenreTrack}
-          />
-        ))}
+        {filteredList.map((track: RelistTrack) => {
+          return <TableRow key={track.trackId} richGenreTrack={track} />;
+        })}
       </tbody>
-      {recommandationList.length > 0 && (
-        <>
-          <thead>
-            <tr>Recommandations</tr>
-          </thead>
-          <tbody>
-            {recommandationList.map((track) => (
-              <TableRow
-                key={track.trackId}
-                richGenreTrack={track}
-                isRecommandation={true}
-              />
-            ))}
-          </tbody>
-        </>
-      )}
     </table>
   );
 };

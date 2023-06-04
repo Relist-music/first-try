@@ -4,7 +4,7 @@ import { faCircleXmark as faCircleXmarkOutline } from '@fortawesome/free-regular
 import ShowMoreButton from '@/components/design-system/buttons/ShowMore';
 import { mapUmbrellaToSubgenres } from '@/utils/grouping';
 import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
-import { FilteringContext } from '@/contexts/filteringContext';
+import { FilteringContext } from '@/contexts/FilteringContext';
 
 const FilterList = () => {
   const { umbrellaGenres, setUmbrellaGenres, filters, setFilters } =

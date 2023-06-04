@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { RelistTrack } from '@/types/myTypes';
 import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
-import { FilteringContext } from '@/contexts/filteringContext';
+import { FilteringContext } from '@/contexts/FilteringContext';
 
 export const GenreCell = ({
   richGenreTrack,
@@ -59,9 +59,9 @@ export const GenreCell = ({
                       ...umbrellas,
                     ]);
                   } else {
-                    debugger;
+                    // debugger;
                     setUmbrellaGenres((umbrellas) => {
-                      debugger;
+                      // debugger;
                       const a = umbrellas.filter(
                         (umbrella) => umbrella !== match.umbrella,
                       );

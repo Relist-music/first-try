@@ -9,8 +9,6 @@ export const fetchLiked = async () => {
     }),
   });
 
-  console.log(data);
-
   return data;
 };
 

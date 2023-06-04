@@ -8,8 +8,8 @@ const PlaylistHeader = ({
   imageUrl: string;
 }) => (
   <div id="header" className="flex items-end gap-x-2">
-    <img src={imageUrl} alt="" />
-    <h1 style={{ lineHeight: '120%' }}>{title}</h1>
+    <img src={imageUrl} alt="likes images" />
+    <h1 className="text-2xl">{title}</h1>
   </div>
 );
 
