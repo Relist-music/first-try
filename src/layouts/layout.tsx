@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     (async () => {
       const me = await fetchMe();
       const fetchPlaylists = await fetchUserPlaylists({ userId: me.id });
-      setPlaylists(fetchPlaylists.items);
+      setPlaylists(fetchPlaylists.items ?? []);
     })();
   }, []);
 

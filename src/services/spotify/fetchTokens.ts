@@ -25,6 +25,7 @@ export const fetchTokens = async (code: string) => {
     localStorage.setItem('refresh_token', refresh_token);
     localStorage.setItem('scope', scope);
     localStorage.setItem('token_type', token_type);
+    localStorage.setItem('now', new Date().toString());
     printLocalStorage();
   } catch (err) {
     console.log(err);
