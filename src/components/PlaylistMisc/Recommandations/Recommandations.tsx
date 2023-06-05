@@ -3,7 +3,7 @@ import { useState } from 'react';
 import cn from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import { TableRow } from '../Lists/TableItem';
+import { TableRow } from '@/components/PlaylistMisc/Lists/TableItem';
 
 export const Recommandations = ({
   recommandationsItems,

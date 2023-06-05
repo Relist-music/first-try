@@ -93,7 +93,7 @@ export const RecommandationsContextProvider = ({
   }, [list]);
 
   useEffect(() => {
-    // debugger;
+    
 
     const selectedPick = pickRecommandations({ list });
 

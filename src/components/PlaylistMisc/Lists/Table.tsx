@@ -4,7 +4,6 @@ import { TableRow } from './TableItem';
 import { TableCheckboxCell } from './TableItem/TableCell';
 import { Switch } from '@headlessui/react';
 import { FilteringContext } from '@/contexts/FilteringContext';
-import { Recommandations } from '../Recommandations/Recommandations';
 
 const TableHead = () => {
   const { useUmbrellaGenres, setUseUmbrellaGenres } =
