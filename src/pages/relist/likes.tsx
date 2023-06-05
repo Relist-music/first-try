@@ -5,7 +5,7 @@ import Layout from '@/layouts/layout';
 import { PlaylistHeader } from '@/components/PlaylistMisc';
 import FilteringContextProvider from '@/contexts/FilteringContext';
 import BottomBar from '@/components/design-system/controls/BottomBar';
-import RecommandationList from '@/components/Recommandations';
+import { RecommandationList } from '@/components/Recommandations';
 import RecommandationsContextProvider from '@/contexts/RecommandationContext';
 
 const Likes = () => {

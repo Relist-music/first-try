@@ -16,8 +16,6 @@ const UseRecommandations = ({ list }: { list: RelistTrack[] }) => {
   const selected = pickRecommandations({ list });
 
   useEffect(() => {
-    
-
     if (selected.length) {
       (async () => {
         const { tracks, seeds } = await fetchRecommandations({

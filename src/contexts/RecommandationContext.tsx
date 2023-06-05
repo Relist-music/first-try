@@ -93,8 +93,6 @@ export const RecommandationsContextProvider = ({
   }, [list]);
 
   useEffect(() => {
-    
-
     const selectedPick = pickRecommandations({ list });
 
     if (selectedPick.length) {

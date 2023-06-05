@@ -59,9 +59,7 @@ export const GenreCell = ({
                       ...umbrellas,
                     ]);
                   } else {
-                    
                     setUmbrellaGenres((umbrellas) => {
-                      
                       const a = umbrellas.filter(
                         (umbrella) => umbrella !== match.umbrella,
                       );

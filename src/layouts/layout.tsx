@@ -1,4 +1,3 @@
-import BottomBar from '@/components/design-system/controls/BottomBar';
 import Sidebar from '@/components/design-system/navigations/Sidebar/Sidebar';
 import PlaylistEntry from '@/components/sidebar/PlaylistEntry';
 import fetchMe from '@/services/spotify/fetchMe';
@@ -6,11 +5,9 @@ import fetchUserPlaylists from '@/services/spotify/fetchUserPlaylists';
 import { PlaylistObjectSimplified } from '@/types/spotify-node-api';
 import Link from 'next/link';
 import { ReactNode, useEffect, useState } from 'react';
-import styles from './layout.module.css';
+// import styles from './layout.module.css';
 import Player from '@/components/Player/Player';
 import PlayingContextProvider from '@/contexts/PlayingContext';
-import FilteringContextProvider from '@/contexts/FilteringContext';
-import RecommandationList from '@/components/Recommandations';
 
 export default function Layout({ children }: { children: ReactNode }) {
   const [playlists, setPlaylists] = useState<PlaylistObjectSimplified[]>([]);
