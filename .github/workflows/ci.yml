@@ -26,9 +26,12 @@ jobs:
         with:
           node-version: lts/*
           cache: 'pnpm'
+      
+      - name: Update pnpm lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install 
 
       - name: Check types
         run: pnpm type-check

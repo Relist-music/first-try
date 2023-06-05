@@ -4,8 +4,7 @@ import { useContext } from 'react';
 import { PlayingContext } from '@/contexts/PlayingContext';
 
 const PlaylistActions = () => {
-  const { isPlaying, setIsPlaying, setCurrentAudio, setCurrentPlaylist } =
-    useContext(PlayingContext);
+  const { isPlaying, setIsPlaying } = useContext(PlayingContext);
   return (
     <div
       className="text-6xl text-green-400 w-max"

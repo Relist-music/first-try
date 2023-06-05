@@ -1,6 +1,7 @@
 import { RelistTrack } from '@/types/myTypes';
 import { useContext } from 'react';
-import { FilteringContext } from '@/contexts/filteringContext';
+import { FilteringContext } from '@/contexts/FilteringContext';
+import { RecommandationsContext } from '@/contexts/RecommandationContext';
 
 const useFindlikedContextForTrack = ({ track }: { track: RelistTrack }) => {
   const { filteredList } = useContext(FilteringContext);
@@ -9,7 +10,6 @@ const useFindlikedContextForTrack = ({ track }: { track: RelistTrack }) => {
     (x) => x.indexInList === indexInList,
   );
   if (isInFilteredList) {
-    console.log('sliced', filteredList.slice(indexInList));
     return {
       uris: [...filteredList.slice(indexInList).map((track) => track.trackUri)],
       wasFound: true,
@@ -27,7 +27,7 @@ const useFindRecommandationContextForTrack = ({
 }: {
   track: RelistTrack;
 }) => {
-  const { recommandationList } = useContext(FilteringContext);
+  const { recommandationList } = useContext(RecommandationsContext);
   const { indexInList } = track;
   const isInFilteredList = recommandationList.find(
     (x) => x.indexInList === indexInList,

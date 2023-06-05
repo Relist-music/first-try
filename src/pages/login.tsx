@@ -18,7 +18,6 @@ function RedirectToAuthorizeUrl() {
       show_dialog: true,
     },
   });
-  console.log({ url });
   window.location.href = url;
 }
 
