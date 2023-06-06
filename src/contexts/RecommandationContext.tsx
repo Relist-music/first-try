@@ -109,6 +109,11 @@ export const RecommandationsContextProvider = ({
           mapRecommendationTrackObjectToGenreAggregate(track, index),
         );
 
+        setSelectedCopy({
+          tracks: selectedPick.map((aggregate) => aggregate.trackId),
+          artists: [],
+          genres: [],
+        });
         setRecommandationList(recommandationListRelist);
         setRecommandationSeeds(seeds);
       })();
