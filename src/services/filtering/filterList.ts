@@ -1,13 +1,14 @@
 import { RelistTrack } from '@/types/myTypes';
+import { SavedTrackObject } from '@/types/spotify-node-api';
 
 export function filterList({
   list,
   filters,
 }: {
-  list: RelistTrack[];
+  list: SavedTrackObject[];
   filters: string[];
 }) {
-  const filteredList = list.filter((richGenreTrack: RelistTrack) => {
+  const filteredList = list.filter((richGenreTrack: SavedTrackObject) => {
     if (filters.length === 0) {
       return true;
     } else {

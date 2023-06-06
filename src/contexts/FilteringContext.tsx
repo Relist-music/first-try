@@ -2,7 +2,10 @@
 
 import { RelistTrack, RelistGenre } from '@/types/myTypes';
 import { createContext, useState, ReactNode, useMemo, useEffect } from 'react';
-import { RecommendationsSeedObject } from '@/types/spotify-node-api';
+import {
+  RecommendationsSeedObject,
+  SavedTrackObject,
+} from '@/types/spotify-node-api';
 import { CountGenres } from '@/services/filtering/countGenres';
 import { filterList } from '@/services/filtering/filterList';
 
@@ -41,7 +44,7 @@ const FilteringContextProvider = ({
   list,
 }: {
   children: ReactNode;
-  list: RelistTrack[];
+  list: SavedTrackObject[];
 }) => {
   const [filters, setFilters] = useState<string[]>([]);
   const [umbrellaGenres, setUmbrellaGenres] = useState<string[]>([]);
