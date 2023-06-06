@@ -12,7 +12,6 @@ import RecommandationsContextProvider from '@/contexts/RecommandationContext';
 
 const Likes = () => {
   const { liked, isLoading } = useAllLiked();
-  console.log('liked', liked ?? []);
   return (
     <>
       <FilteringContextProvider list={liked ?? []}>

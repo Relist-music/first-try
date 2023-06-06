@@ -24,7 +24,7 @@ export async function getWithBackoffRetry<T>({
       });
 
       const body = await response.json();
-      console.log('la', body);
+
       if (
         response.status === 401 &&
         (body.error.message === 'The access token expired' ||
