@@ -1,20 +1,29 @@
+import { useState, useEffect, useRef, useCallback } from 'react';
 import styled from '@emotion/styled';
-import { useCallback, useEffect, useRef, useState } from 'react';
 
-const BottomBarStyled = styled.div`
-  flex-grow: 0;
-  flex-shrink: 0;
-  min-height: 0px;
-  max-height: 400px;
+const BottomBarContainer = styled.div`
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
-  .bottomBarResizer {
-    min-height: 6px;
-    background-color: red;
-    width: 100%;
-    &:hover {
-      cursor: row-resize;
-    }
-  }
+  border: 2px solid gray;
+  background-color: white;
+`;
+
+const Resizer = styled.div`
+  min-height: 5px;
+  height: 10px;
+  cursor: ns-resize;
+  background-color: gray;
+  width: 100%;
+  display: block;
+`;
+
+const Content = styled.div`
+  flex-grow: 1;
+  background-color: white;
+  padding: 8px 4px;
 `;
 
 export const BottomBar = ({
@@ -22,33 +31,28 @@ export const BottomBar = ({
 }: {
   children: string | JSX.Element | JSX.Element[] | (() => JSX.Element);
 }) => {
-  const bottomBarRef = useRef<HTMLDivElement>(null);
-  const [mouseDownPoint, setMouseDownPoint] = useState<number>(NaN);
+  const barRef = useRef(null);
   const [isResizing, setIsResizing] = useState(false);
-  const [bottomBarHeight, setBottomBarHeight] = useState(200);
+  const [barHeight, setBarHeight] = useState(240);
 
   const startResizing = useCallback((mouseDownEvent) => {
-    setMouseDownPoint(mouseDownEvent.clientY);
     setIsResizing(true);
   }, []);
 
-  const stopResizing = useCallback((event) => {
+  const stopResizing = useCallback(() => {
     setIsResizing(false);
   }, []);
 
   const resize = useCallback(
     (mouseMoveEvent) => {
-      if (isResizing && bottomBarRef.current) {
-        console.log(
-          'mouseMoveEvent.clientY',
-          mouseDownPoint + (mouseDownPoint - mouseMoveEvent.clientY),
-        );
-        setBottomBarHeight(
-          mouseDownPoint + (mouseDownPoint - mouseMoveEvent.clientY),
-        );
+      if (isResizing && barRef.current) {
+        const newHeight = window.innerHeight - mouseMoveEvent.clientY;
+        if (newHeight >= 0 && newHeight <= 640) {
+          setBarHeight(newHeight);
+        }
       }
     },
-    [isResizing, mouseDownPoint],
+    [isResizing],
   );
 
   useEffect(() => {
@@ -61,11 +65,10 @@ export const BottomBar = ({
   }, [resize, stopResizing]);
 
   return (
-    <BottomBarStyled ref={bottomBarRef} style={{ height: bottomBarHeight }}>
-      <div className="bottomBarResizer" onMouseDown={startResizing} />
-      <h1>BottomBar</h1>
-      <div>{children}</div>
-    </BottomBarStyled>
+    <BottomBarContainer ref={barRef} style={{ height: barHeight }}>
+      <Resizer onMouseDown={startResizing} />
+      <Content>{children}</Content>
+    </BottomBarContainer>
   );
 };
 
