@@ -4,6 +4,7 @@ import {
   PlaylistListTable,
   PlaylistActions,
 } from '@/components/PlaylistMisc';
+import ActionBar from './PlaylistMisc/Lists/TableItem/TableActionBar/ActionBar';
 
 const Playlist = () => {
   return (
@@ -16,6 +17,7 @@ const Playlist = () => {
       <PlaylistActions />
       <br />
       <PlaylistListTable />
+      <ActionBar />
     </>
   );
 };

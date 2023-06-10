@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from 'react';
 import { useHover } from '@/hooks/useHover';
 
 const TableCellCheckbox = ({
@@ -6,7 +5,7 @@ const TableCellCheckbox = ({
   setSelected,
 }: {
   selected: boolean;
-  setSelected: Dispatch<SetStateAction<boolean>> | (() => void);
+  setSelected: () => void;
 }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
 
@@ -16,7 +15,7 @@ const TableCellCheckbox = ({
     ? { opacity: '1' }
     : { opacity: '0.1' };
   return (
-    <td ref={hoverRef} onClick={() => setSelected(!selected)}>
+    <td ref={hoverRef} onClick={() => setSelected()}>
       <label htmlFor="select1">
         <input
           id="select1"

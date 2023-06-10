@@ -8,17 +8,28 @@ import { useContext, useState } from 'react';
 import { playOrResumeTrack } from '@/services/spotify/PlayResumePlayback';
 import { PlayingContext } from '@/contexts/PlayingContext';
 import { useFindContextForTrack } from '@/hooks/trackContext/findContextForTrack';
+import { FilteringContext } from '@/contexts/FilteringContext';
 
 const TableRow = ({
   richGenreTrack,
-  isRecommandation = false,
 }: {
   richGenreTrack: RelistTrack;
   isRecommandation?: boolean;
 }) => {
   const [selected, setSelected] = useState(false);
   const { deviceId } = useContext(PlayingContext);
+  const { setSelectedTracksIds } = useContext(FilteringContext);
   const { uris: foundUris } = useFindContextForTrack({ track: richGenreTrack });
+
+  function toggleTrackToSelected() {
+    setSelected(!selected);
+    setSelectedTracksIds((prev) => {
+      if (selected) {
+        return prev.filter((id) => id !== richGenreTrack.trackId);
+      }
+      return [...prev, richGenreTrack.trackId];
+    });
+  }
   return (
     <tr
       key={richGenreTrack.trackId}
@@ -28,7 +39,10 @@ const TableRow = ({
           : 'hover:bg-gray-100 cursor-pointer'
       }
     >
-      <TableCheckboxCell selected={selected} setSelected={setSelected} />
+      <TableCheckboxCell
+        selected={selected}
+        setSelected={toggleTrackToSelected}
+      />
       <td
         onClick={async () => {
           console.log('clicked', richGenreTrack.trackUri);
@@ -61,11 +75,7 @@ const TableRow = ({
       </td>
       <td className="max-w-[60rem]">
         <div id="genres" className="flex flex-wrap gap-x-1">
-          {!isRecommandation ? (
-            <TableGenreCell richGenreTrack={richGenreTrack} />
-          ) : (
-            <span>no genres yet for recommandation</span>
-          )}
+          <TableGenreCell richGenreTrack={richGenreTrack} />
         </div>
       </td>
       <td>

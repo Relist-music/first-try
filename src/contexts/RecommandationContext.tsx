@@ -1,37 +1,10 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-// const [recommandationList, setRecommandationList] = useState<RelistTrack[]>(
-//   [],
-// );
-// const [recommandationSeeds, setRecommandationSeeds] = useState<
-//   RecommendationsSeedObject[]
-// >([]);
 
-// const selected = pickRecommandations({ list });
-// useEffect(() => {
-//   if (selected.length) {
-//     (async () => {
-//       const { tracks, seeds } = await fetchRecommandations({
-//         seed_tracks: selected.map((aggregate) => aggregate.trackId).join(','),
-//         seed_genres: '',
-//         seed_artists: '',
-//       });
-
-//       const recommandationListRelist = tracks.map((track, index) =>
-//         mapRecommendationTrackObjectToGenreAggregate(track, index),
-//       );
-
-//       setRecommandationList(recommandationListRelist);
-//       setRecommandationSeeds(seeds);
-//     })();
-//   }
-// }, [list, selected]);
-
-import UseRecommandations from '@/hooks/recommandations';
 import { pickRecommandations } from '@/services/filtering/recommandations';
 import fetchRecommandations from '@/services/spotify/fetchRecommandations';
 import { RelistTrack } from '@/types/myTypes';
 import { RecommendationsSeedObject } from '@/types/spotify-node-api';
-import { mapRecommendationTrackObjectToGenreAggregate } from '@/utils/mapRecommendationTrackObjectToGenreAggregate';
+import { asyncMapRecommendationTrackObjectToGenreAggregate } from '@/utils/mapRecommendationTrackObjectToGenreAggregate';
 import { createContext, useEffect, useState } from 'react';
 
 interface selectedProps {
@@ -101,8 +74,14 @@ export const RecommandationsContextProvider = ({
           seed_artists: '',
         });
 
-        const recommandationListRelist = tracks.map((track, index) =>
-          mapRecommendationTrackObjectToGenreAggregate(track, index),
+        const recommandationListRelist = await Promise.all(
+          tracks.map(
+            async (track, index) =>
+              await asyncMapRecommendationTrackObjectToGenreAggregate(
+                track,
+                index,
+              ),
+          ),
         );
 
         setSelectedCopy({

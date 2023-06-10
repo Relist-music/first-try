@@ -17,6 +17,9 @@ export type FilteringContextType = {
 
   countedGenres: Pick<RelistGenre, 'name' | 'count'>[];
 
+  seletedTracksIds: string[];
+  setSelectedTracksIds: React.Dispatch<React.SetStateAction<string[]>>;
+
   useUmbrellaGenres: boolean;
   setUseUmbrellaGenres: React.Dispatch<React.SetStateAction<boolean>>;
 };
@@ -32,6 +35,10 @@ export const FilteringContext = createContext<FilteringContextType>({
 
   countedGenres: [] as Pick<RelistGenre, 'name' | 'count'>[],
 
+  seletedTracksIds: [] as string[],
+  setSelectedTracksIds: () => {},
+
+  // TODO: see about that state necessity
   useUmbrellaGenres: false,
   setUseUmbrellaGenres: () => {},
 });
@@ -45,6 +52,7 @@ const FilteringContextProvider = ({
 }) => {
   const [filters, setFilters] = useState<string[]>([]);
   const [umbrellaGenres, setUmbrellaGenres] = useState<string[]>([]);
+  const [seletedTracksIds, setSelectedTracksIds] = useState<string[]>([]);
 
   const filteredList = useMemo(
     () => filterList({ list, filters }),
@@ -61,6 +69,9 @@ const FilteringContextProvider = ({
     setUmbrellaGenres,
 
     filteredList: filteredList,
+
+    seletedTracksIds,
+    setSelectedTracksIds,
 
     countedGenres: CountGenres({ list: filteredList }),
 

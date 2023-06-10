@@ -1,9 +1,13 @@
 import { RecommandationsContext } from '@/contexts/RecommandationContext';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { TableRow } from '../PlaylistMisc/Lists/TableItem';
 import { FilteringContext } from '@/contexts/FilteringContext';
 import { pickRecommandations } from '@/services/filtering/recommandations';
-import { mapRecommendationTrackObjectToGenreAggregate } from '@/utils/mapRecommendationTrackObjectToGenreAggregate';
+import {
+  asyncMapRecommendationTrackObjectToGenreAggregate,
+  mapRecommendationTrackObjectToGenreAggregate,
+} from '@/utils/mapRecommendationTrackObjectToGenreAggregate';
+
 import fetchRecommandations from '@/services/spotify/fetchRecommandations';
 
 const RecommandationList = () => {
@@ -27,9 +31,16 @@ const RecommandationList = () => {
           seed_artists: '',
         });
 
-        const recommandationListRelist = tracks.map((track, index) =>
-          mapRecommendationTrackObjectToGenreAggregate(track, index),
+        const recommandationListRelist = await Promise.all(
+          tracks.map(
+            async (track, index) =>
+              await asyncMapRecommendationTrackObjectToGenreAggregate(
+                track,
+                index,
+              ),
+          ),
         );
+
         setSelected({
           tracks: selectedPick.map((aggregate) => aggregate.trackId),
           artists: [],

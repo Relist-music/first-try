@@ -1,54 +1,63 @@
+import Playlist from '@/components/Playlist';
+import { PlaylistHeader } from '@/components/PlaylistMisc';
+import { RecommandationList } from '@/components/Recommandations';
+import BottomBar from '@/components/design-system/controls/BottomBar';
+import FilteringContextProvider, {
+  FilteringContext,
+} from '@/contexts/FilteringContext';
+import RecommandationsContextProvider from '@/contexts/RecommandationContext';
+import usePlaylist from '@/hooks/usePlaylist';
 import Layout from '@/layouts/layout';
-import fetchPlaylist from '@/services/spotify/fetchPlaylist';
-import { PlaylistTrackObject } from '@/types/spotify-node-api';
 import { useRouter } from 'next/router';
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement } from 'react';
 
 const PlaylistId = () => {
-  const [playlistTrackObjects, setPlaylistTrackObjects] = useState<
-    PlaylistTrackObject[]
-  >([]);
+  // const [playlistTrackObjects, setPlaylistTrackObjects] = useState<
+  //   PlaylistTrackObject[]
+  // >([]);
   const router = useRouter();
   const { id } = router.query;
-  useEffect(() => {
-    if (!id) return;
-    if (typeof id !== 'string') return;
-    (async () => {
-      const { tracks } = await fetchPlaylist({ playlistId: id });
-      setPlaylistTrackObjects(tracks.items);
-    })();
-  }, [id]);
-
-  if (playlistTrackObjects.length === 0) return <div>loading</div>;
+  // useEffect(() => {
+  //   if (!id) return;
+  //   if (typeof id !== 'string') return;
+  //   (async () => {
+  //     const { tracks } = await fetchPlaylist({ playlistId: id });
+  //     setPlaylistTrackObjects(tracks.items);
+  //   })();
+  // }, [id]);
+  const playlistId = id
+    ? ((Array.isArray(id) ? id.at(0) : id) as string)
+    : ('' as string);
+  const { RelistPlaylistTracks, isLoading } = usePlaylist({ playlistId });
+  console.log('id', id, playlistId);
   return (
     <div>
-      {playlistTrackObjects.map(({ track }, index) => {
-        if (track) {
-          const { artists, id, name, album } = track;
-          return (
-            <div key={`${id}-${index}`} className="flex gap-2 mb-4">
-              <img
-                src={album.images.at(0)?.url}
-                style={{ width: '80px', height: '80px' }}
-                alt=""
-              />
-              <div className="">
-                <div className="name">song: {name}</div>
-                <div className="album">album: {album.name}</div>
-                <div className="flex">
-                  artist:
-                  <div className="artists flex gap-2">
-                    {artists.map(({ name }) => {
-                      console.log(name);
-                      return <div key={name}>{name}</div>;
-                    })}
+      <>
+        <FilteringContextProvider list={RelistPlaylistTracks ?? []}>
+          <FilteringContext.Consumer>
+            {({ filteredList }) => (
+              <RecommandationsContextProvider list={filteredList ?? []}>
+                <>
+                  <div className="topish h-screen flex flex-col">
+                    <div className="top flex-grow basis-[400px] overflow-y-auto p-2">
+                      <PlaylistHeader
+                        title={`Playlist ${playlistId}`}
+                        imageUrl="/images/spotify-liked-image.png"
+                      />
+                      <div className="middle">
+                        {!isLoading && RelistPlaylistTracks && <Playlist />}
+                      </div>
+                    </div>
+                    <BottomBar>
+                      <RecommandationList />
+                    </BottomBar>
                   </div>
-                </div>
-              </div>
-            </div>
-          );
-        }
-      })}
+                </>
+              </RecommandationsContextProvider>
+            )}
+          </FilteringContext.Consumer>
+        </FilteringContextProvider>
+      </>
     </div>
   );
 };

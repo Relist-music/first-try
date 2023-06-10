@@ -20,7 +20,7 @@ const Likes = () => {
             <RecommandationsContextProvider list={filteredList ?? []}>
               <>
                 <div className="topish h-screen flex flex-col">
-                  <div className="top flex-grow basis-[400px] overflow-y-auto p-2">
+                  <div className="top flex-grow basis-[400px] overflow-y-auto p-2 relative">
                     <PlaylistHeader
                       title="Liked Songs"
                       imageUrl="/images/spotify-liked-image.png"
