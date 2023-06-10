@@ -9,10 +9,12 @@ import {
   faCirclePlay,
   faCirclePause,
 } from '@fortawesome/free-solid-svg-icons';
+
 import { PlayingContext } from '@/contexts/PlayingContext';
 import TransferPlayback from '@/services/spotify/transferPlayback';
 import setRepeatMode from '@/services/spotify/setRepeatMode';
 import togglePlaybackShuffle from '@/services/spotify/togglePlaybackShuffle';
+import Volume from './PlayerMisc/Volume';
 
 // {
 //   uri: "",
@@ -561,6 +563,9 @@ const Player = () => {
               )
             }
           </div>
+        </div>
+        <div>
+          <Volume player={player} />
         </div>
       </div>
     );
