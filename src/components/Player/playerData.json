@@ -1,0 +1,294 @@
+[
+  {
+    "uri": "",
+    "metadata": {
+      "name": "",
+      "uri": "",
+      "url": "",
+      "current_item": {
+        "name": "Egérie",
+        "uri": "spotify:track:6UeG6DogntZ1s89ejurXhT",
+        "url": "https://api.spotify.com/v1/tracks/6UeG6DogntZ1s89ejurXhT",
+        "uid": "c1579b883d70a42f76cd",
+        "content_type": "TRACK",
+        "artists": [
+          {
+            "name": "Nekfeu",
+            "uri": "spotify:artist:4LXBc13z5EWsc5N32bLxfH",
+            "url": "https://api.spotify.com/v1/artists/4LXBc13z5EWsc5N32bLxfH"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02ff6a615bde464f6f9ee3dcce",
+            "height": 300,
+            "width": 300,
+            "size": "UNKNOWN"
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851ff6a615bde464f6f9ee3dcce",
+            "height": 64,
+            "width": 64,
+            "size": "SMALL"
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273ff6a615bde464f6f9ee3dcce",
+            "height": 640,
+            "width": 640,
+            "size": "LARGE"
+          }
+        ],
+        "estimated_duration": 210453,
+        "group": {
+          "name": "Feu",
+          "uri": "spotify:album:7BgeK3jtk8GDlEwouUY3AG",
+          "url": "https://api.spotify.com/v1/albums/7BgeK3jtk8GDlEwouUY3AG"
+        }
+      },
+      "previous_items": [],
+      "next_items": [
+        {
+          "name": "Troubled Times",
+          "uri": "spotify:track:1WwDFD23XjqAAtRTky5UwK",
+          "url": "https://api.spotify.com/v1/tracks/1WwDFD23XjqAAtRTky5UwK",
+          "uid": "136ed2d55e010344b7ce",
+          "content_type": "TRACK",
+          "artists": [
+            {
+              "name": "Screaming Trees",
+              "uri": "spotify:artist:3Ukr3Ufjg8ygRJv7Ww887f",
+              "url": "https://api.spotify.com/v1/artists/3Ukr3Ufjg8ygRJv7Ww887f"
+            }
+          ],
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e020dfb2d8dd185b3d008a2106e",
+              "height": 300,
+              "width": 300,
+              "size": "UNKNOWN"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048510dfb2d8dd185b3d008a2106e",
+              "height": 64,
+              "width": 64,
+              "size": "SMALL"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2730dfb2d8dd185b3d008a2106e",
+              "height": 640,
+              "width": 640,
+              "size": "LARGE"
+            }
+          ],
+          "estimated_duration": 320906,
+          "group": {
+            "name": "Sweet Oblivion",
+            "uri": "spotify:album:3SOcm48I0DOX1KEHF2IEVY",
+            "url": "https://api.spotify.com/v1/albums/3SOcm48I0DOX1KEHF2IEVY"
+          }
+        },
+        {
+          "name": "I Just Wanna Live",
+          "uri": "spotify:track:3FDKhR3vedB1MIsP2cvKcA",
+          "url": "https://api.spotify.com/v1/tracks/3FDKhR3vedB1MIsP2cvKcA",
+          "uid": "63404f184adaf6928796",
+          "content_type": "TRACK",
+          "artists": [
+            {
+              "name": "Good Charlotte",
+              "uri": "spotify:artist:5aYyPjAsLj7UzANzdupwnS",
+              "url": "https://api.spotify.com/v1/artists/5aYyPjAsLj7UzANzdupwnS"
+            }
+          ],
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e02636e57cad24da225d0c70e55",
+              "height": 300,
+              "width": 300,
+              "size": "UNKNOWN"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851636e57cad24da225d0c70e55",
+              "height": 64,
+              "width": 64,
+              "size": "SMALL"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b273636e57cad24da225d0c70e55",
+              "height": 640,
+              "width": 640,
+              "size": "LARGE"
+            }
+          ],
+          "estimated_duration": 166053,
+          "group": {
+            "name": "The Chronicles of Life and Death (\"LIFE\" version)",
+            "uri": "spotify:album:1mHbT9H5hDR284u0GCBgJv",
+            "url": "https://api.spotify.com/v1/albums/1mHbT9H5hDR284u0GCBgJv"
+          }
+        }
+      ],
+      "options": {
+        "shuffled": true,
+        "repeat_mode": "OFF"
+      },
+      "restrictions": {
+        "pause": [],
+        "resume": [],
+        "seek": [],
+        "skip_next": [],
+        "skip_prev": [
+          "no_prev_track"
+        ],
+        "toggle_repeat_context": [],
+        "toggle_repeat_track": [],
+        "toggle_shuffle": [],
+        "peek_next": [],
+        "peek_prev": []
+      }
+    }
+  },
+  {
+    "current_track": {
+      "id": "6UeG6DogntZ1s89ejurXhT",
+      "uri": "spotify:track:6UeG6DogntZ1s89ejurXhT",
+      "type": "track",
+      "uid": "c1579b883d70a42f76cd",
+      "linked_from": {
+        "uri": null,
+        "id": null
+      },
+      "media_type": "audio",
+      "track_type": "audio",
+      "name": "Egérie",
+      "duration_ms": 210453,
+      "artists": [
+        {
+          "name": "Nekfeu",
+          "uri": "spotify:artist:4LXBc13z5EWsc5N32bLxfH",
+          "url": "https://api.spotify.com/v1/artists/4LXBc13z5EWsc5N32bLxfH"
+        }
+      ],
+      "album": {
+        "name": "Feu",
+        "uri": "spotify:album:7BgeK3jtk8GDlEwouUY3AG",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02ff6a615bde464f6f9ee3dcce",
+            "height": 300,
+            "width": 300,
+            "size": "UNKNOWN"
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851ff6a615bde464f6f9ee3dcce",
+            "height": 64,
+            "width": 64,
+            "size": "SMALL"
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273ff6a615bde464f6f9ee3dcce",
+            "height": 640,
+            "width": 640,
+            "size": "LARGE"
+          }
+        ]
+      },
+      "is_playable": true
+    },
+    "next_tracks": [
+      {
+        "id": "1WwDFD23XjqAAtRTky5UwK",
+        "uri": "spotify:track:1WwDFD23XjqAAtRTky5UwK",
+        "type": "track",
+        "uid": "136ed2d55e010344b7ce",
+        "linked_from": {
+          "uri": null,
+          "id": null
+        },
+        "media_type": "video",
+        "track_type": "video",
+        "name": "Troubled Times",
+        "duration_ms": 320906,
+        "artists": [
+          {
+            "name": "Screaming Trees",
+            "uri": "spotify:artist:3Ukr3Ufjg8ygRJv7Ww887f",
+            "url": "https://api.spotify.com/v1/artists/3Ukr3Ufjg8ygRJv7Ww887f"
+          }
+        ],
+        "album": {
+          "name": "Sweet Oblivion",
+          "uri": "spotify:album:3SOcm48I0DOX1KEHF2IEVY",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e020dfb2d8dd185b3d008a2106e",
+              "height": 300,
+              "width": 300,
+              "size": "UNKNOWN"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048510dfb2d8dd185b3d008a2106e",
+              "height": 64,
+              "width": 64,
+              "size": "SMALL"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b2730dfb2d8dd185b3d008a2106e",
+              "height": 640,
+              "width": 640,
+              "size": "LARGE"
+            }
+          ]
+        },
+        "is_playable": true
+      },
+      {
+        "id": "3FDKhR3vedB1MIsP2cvKcA",
+        "uri": "spotify:track:3FDKhR3vedB1MIsP2cvKcA",
+        "type": "track",
+        "uid": "63404f184adaf6928796",
+        "linked_from": {
+          "uri": null,
+          "id": null
+        },
+        "media_type": "video",
+        "track_type": "video",
+        "name": "I Just Wanna Live",
+        "duration_ms": 166053,
+        "artists": [
+          {
+            "name": "Good Charlotte",
+            "uri": "spotify:artist:5aYyPjAsLj7UzANzdupwnS",
+            "url": "https://api.spotify.com/v1/artists/5aYyPjAsLj7UzANzdupwnS"
+          }
+        ],
+        "album": {
+          "name": "The Chronicles of Life and Death (\"LIFE\" version)",
+          "uri": "spotify:album:1mHbT9H5hDR284u0GCBgJv",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00001e02636e57cad24da225d0c70e55",
+              "height": 300,
+              "width": 300,
+              "size": "UNKNOWN"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851636e57cad24da225d0c70e55",
+              "height": 64,
+              "width": 64,
+              "size": "SMALL"
+            },
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000b273636e57cad24da225d0c70e55",
+              "height": 640,
+              "width": 640,
+              "size": "LARGE"
+            }
+          ]
+        },
+        "is_playable": true
+      }
+    ],
+    "previous_tracks": []
+  }
+]
