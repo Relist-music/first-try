@@ -42,9 +42,6 @@ const ProgressBar = ({
   const refTimestamp = useRef(Date.now()); // ref for start timestamp
   const timeoutId = useRef<NodeJS.Timeout | null>(null); // ref for timeout id
 
-  console.log('progress time', progressTime);
-  console.log('refTimestamp', refTimestamp.current);
-
   useEffect(() => {
     // Clear any existing timeouts
     if (timeoutId.current) {
