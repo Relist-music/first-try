@@ -41,7 +41,6 @@ const ProgressBar = ({
   const [progressTime, setProgressTime] = useState(currentPosition);
   const refTimestamp = useRef(Date.now()); // ref for start timestamp
   const timeoutId = useRef<NodeJS.Timeout | null>(null); // ref for timeout id
-
   useEffect(() => {
     // Clear any existing timeouts
     if (timeoutId.current) {
@@ -96,6 +95,8 @@ const ProgressBar = ({
       deviceId: deviceId ?? '',
       position: Math.round(clickPositionPercentage * fullDuration),
     });
+
+    setProgressTime(clickPositionPercentage * fullDuration);
   };
 
   useEffect(() => {
