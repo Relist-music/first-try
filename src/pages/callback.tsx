@@ -20,7 +20,7 @@ const Callback = () => {
             () => (window.location.href = '/relist'),
           );
         } catch (e) {
-          console.log(e);
+          console.log('catch', e);
         }
       }
     })();
