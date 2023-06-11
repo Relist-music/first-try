@@ -1,12 +1,9 @@
 import { RecommandationsContext } from '@/contexts/RecommandationContext';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { TableRow } from '../PlaylistMisc/Lists/TableItem';
 import { FilteringContext } from '@/contexts/FilteringContext';
 import { pickRecommandations } from '@/services/filtering/recommandations';
-import {
-  asyncMapRecommendationTrackObjectToGenreAggregate,
-  mapRecommendationTrackObjectToGenreAggregate,
-} from '@/utils/mapRecommendationTrackObjectToGenreAggregate';
+import { asyncMapRecommendationTrackObjectToGenreAggregate } from '@/utils/mapRecommendationTrackObjectToGenreAggregate';
 
 import fetchRecommandations from '@/services/spotify/fetchRecommandations';
 

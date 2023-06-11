@@ -91,7 +91,7 @@ export interface RelistTrack {
   };
   added_at: ISODateString;
   duration_ms: number;
-  list: string | 'liked' | 'recommandation';
+  list: string | 'liked' | 'recommandation' | 'playlist';
 }
 
 export interface Recording {

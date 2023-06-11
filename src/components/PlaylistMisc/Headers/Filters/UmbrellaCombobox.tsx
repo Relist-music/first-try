@@ -10,7 +10,9 @@ import { EveryNoiseGenre } from '@/types/myTypes';
 const UmbrellaCombobox = () => {
   const { setUseUmbrellaGenres, setFilters, setUmbrellaGenres } =
     useContext(FilteringContext);
-  const [selected, setSelected] = useState<EveryNoiseGenre>([]);
+  const [selected, setSelected] = useState<EveryNoiseGenre>(
+    {} as EveryNoiseGenre,
+  );
   const [query, setQuery] = useState('');
 
   const filteredUmbrellaGenres =
@@ -53,6 +55,7 @@ const UmbrellaCombobox = () => {
               className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
               displayValue={(umbrella) => umbrella.genre}
               onChange={(event) => setQuery(event.target.value)}
+              placeholder='Search for an umbrella (e.g. "pop")'
             />
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronUpDownIcon

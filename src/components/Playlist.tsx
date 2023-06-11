@@ -10,11 +10,11 @@ const Playlist = () => {
   return (
     <>
       <br />
+      <PlaylistActions />
+      <br />
       <GenreList />
       <br />
       <FilterList />
-      <br />
-      <PlaylistActions />
       <br />
       <PlaylistListTable />
       <ActionBar />
