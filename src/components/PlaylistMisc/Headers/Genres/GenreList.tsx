@@ -9,6 +9,9 @@ import { enrichSubgenre } from '@/utils/enrich';
 import SUBGENRES from '@/data/SUBGENRES.json';
 import ShowMoreButton from '@/components/design-system/buttons/ShowMore';
 import { FilteringContext } from '@/contexts/FilteringContext';
+import { mapUmbrellaToSubgenres } from '@/utils/grouping';
+
+import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
 
 const GenreList = () => {
   const { countedGenres, useUmbrellaGenres, setUseUmbrellaGenres } =
@@ -57,6 +60,7 @@ const GenreList = () => {
                   count={genre.count}
                   index={index}
                   color={genre.color}
+                  is={'umbrella'}
                 />
               ))
           : countedGenres
@@ -79,6 +83,7 @@ const GenreList = () => {
                   count={genre.count}
                   index={index}
                   color={genre.color}
+                  is={'subgenre'}
                 />
               ))}
       </div>

@@ -5,22 +5,31 @@ import ShowMoreButton from '@/components/design-system/buttons/ShowMore';
 import { mapUmbrellaToSubgenres } from '@/utils/grouping';
 import UMBRELLA_WITH_SUBGENRES from '@/data/UMBRELLA_WITH_SUBGENRES.json';
 import { FilteringContext } from '@/contexts/FilteringContext';
+import UmbrellaComboBox from './UmbrellaCombobox';
 
 const FilterList = () => {
-  const { umbrellaGenres, setUmbrellaGenres, filters, setFilters } =
-    useContext(FilteringContext);
+  const {
+    umbrellaGenres,
+    setUmbrellaGenres,
+    filters,
+    setFilters,
+    useUmbrellaGenres,
+    setUseUmbrellaGenres,
+  } = useContext(FilteringContext);
   const [showAllFilters, setShowAllFilters] = useState(false);
-  const [useUmbrellaGenres, setUseUmbrellaGenres] = useState(false);
   const hasLotOfFilters = filters.length > 10;
   return (
     <div>
       <label htmlFor="">
-        group filters genre to umbrella{' '}
+        group filters genre to umbrella
         <input
           onChange={() => setUseUmbrellaGenres(!useUmbrellaGenres)}
           type="checkbox"
+          checked={useUmbrellaGenres}
         />
       </label>
+      <br />
+      <UmbrellaComboBox />
       <br />
       {filters.length === 0 ? (
         <span>No filters</span>
@@ -36,17 +45,17 @@ const FilterList = () => {
                   <div
                     key={`${index}-active-filter-${umbrellaGenre}`}
                     className="
-            font-apfel 
-            text-blue-500 
-            px-2 
-            py-1
-            bg-blue-100
-            rounded-md
-            flex
-            gap-x-1
-            items-center
-            w-max
-          "
+                      font-apfel 
+                      text-blue-500 
+                      px-2 
+                      py-1
+                      bg-blue-100
+                      rounded-md
+                      flex
+                      gap-x-1
+                      items-center
+                      w-max
+                    "
                   >
                     {umbrellaGenre}
                     <FontAwesomeIcon
