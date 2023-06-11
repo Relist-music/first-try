@@ -24,6 +24,7 @@ const Player = () => {
     currentPlaybackState,
     setCurrentPlaybackState,
   } = useContext(PlayingContext);
+
   const [isActive, setIsActive] = useState<boolean>(false);
   // weird way to do this, i think a ref is better
   //const [player, setPlayer] = useState<Spotify.Player | undefined>(undefined);
