@@ -12,6 +12,7 @@ export const fetchArtists = async ({ artistIds }: { artistIds: string[] }) => {
     }),
   });
 
+  console.log('artists', data);
   return data;
 };
 

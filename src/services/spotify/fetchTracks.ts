@@ -12,6 +12,7 @@ export const fetchTracks = async ({ tracksIds }: { tracksIds: string[] }) => {
     }),
   });
 
+  console.log('track', data);
   return data;
 };
 
