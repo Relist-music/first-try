@@ -2,7 +2,12 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        switzer: ['Switzer', 'sans-serif'],
+        apfel: ['Apfel Grotezk', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
   // corePlugins: {
