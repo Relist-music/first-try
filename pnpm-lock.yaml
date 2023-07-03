@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -44,6 +44,12 @@ dependencies:
   react-dom:
     specifier: 17.0.2
     version: 17.0.2(react@17.0.2)
+  react-fast-marquee:
+    specifier: 1.6.0
+    version: 1.6.0(react-dom@17.0.2)(react@17.0.2)
+  react-resizable-panels:
+    specifier: 0.0.53
+    version: 0.0.53(react-dom@17.0.2)(react@17.0.2)
   solid:
     specifier: link:@heroicons/react/20/solid
     version: link:@heroicons/react/20/solid
@@ -2900,8 +2906,28 @@ packages:
       scheduler: 0.20.2
     dev: false
 
+  /react-fast-marquee@1.6.0(react-dom@17.0.2)(react@17.0.2):
+    resolution: {integrity: sha512-jtuwT9SNjrqxnE7lGZ8mTL1I8Q4+9G4aBta2p+y2Pa3SjR17QROblwrLICyM8rbjQFHgHawTHcaH9HvoVO2NOA==}
+    peerDependencies:
+      react: '>= 16.8.0 || 18.0.0'
+      react-dom: '>= 16.8.0 || 18.0.0'
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+    dev: false
+
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  /react-resizable-panels@0.0.53(react-dom@17.0.2)(react@17.0.2):
+    resolution: {integrity: sha512-lGOJF0Hh5+Y+Usi7x8btmBTi+6CQV1/RKxnj6jVrzvJ9vLbftbSoJPzymOuX8ZCFimlEwP2AKsGtQVKG/KieHA==}
+    peerDependencies:
+      react: ^16.14.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+    dev: false
 
   /react@17.0.2:
     resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
