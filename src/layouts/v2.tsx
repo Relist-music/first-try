@@ -3,32 +3,42 @@
 import { Links } from '@/components/v2/Sidebar/Links';
 import { PlayerV2 } from '@/components/v2/Sidebar/Player/Player';
 import { ReactNode } from 'react';
-import { Panel, PanelGroup } from 'react-resizable-panels';
+import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 
-
-
-export const V2 = ({ children, defaultLayout = [33, 67] }: { children: ReactNode, defaultLayout?: number[] | undefined }) => {
+export const V2 = ({
+  children,
+  defaultLayout = [17, 83],
+}: {
+  children: ReactNode;
+  defaultLayout?: number[] | undefined;
+}) => {
   const onLayout = (sizes: number[]) => {
     document.cookie = `react-resizable-panels:layout=${JSON.stringify(sizes)}`;
   };
 
   let storage;
-  try {
+  if (typeof localStorage !== 'undefined') {
     storage = localStorage;
-  } catch (error) {
-    console.log(error);
   }
 
   return (
     <div className="bg-[#0F1112] w-screen h-screen p-[0.6rem] flex gap-[0.3rem]">
-      <PanelGroup onLayout={onLayout} direction="horizontal">
-        <Panel  minSize={20} defaultSize={defaultLayout[0]}>
+      <PanelGroup
+        id="panel-group"
+        onLayout={onLayout}
+        direction="horizontal"
+        storage={storage}
+      >
+        <Panel minSize={10} defaultSize={defaultLayout[0]} id="left-panel">
           <div className="left flex flex-col gap-[0.3rem] h-full">
             <PlayerV2 />
             <Links />
           </div>
         </Panel>
-        <Panel minSize={50} defaultSize={defaultLayout[1]}>
+        <PanelResizeHandle id="resize-handle">
+          <div className="h-full w-4 "></div>
+        </PanelResizeHandle>
+        <Panel minSize={50} defaultSize={defaultLayout[1]} id="right-panel">
           <div className="right px-[20px] py-[40px] bg-[#1b2326] flex-1 rounded-[10px] h-full">
             {children}
           </div>
