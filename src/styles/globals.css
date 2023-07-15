@@ -1,3 +1,5 @@
+@import url('./font.css');
+
 @tailwind base;
 
 @layer base {
@@ -17,3 +19,8 @@
 
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400
+}
