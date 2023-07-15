@@ -1,0 +1,16 @@
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { PlayerV2 } from './Player';
+
+const meta: Meta<typeof PlayerV2> = {
+  title: 'Components/Sidebar/Player',
+  component: PlayerV2,
+  tags: ['autodocs'],
+};
+
+export default meta;
+type Story = StoryObj<typeof PlayerV2>;
+
+const Primary: Story = {
+  render: () => <div><PlayerV2 /></div>
+} 

@@ -16,7 +16,8 @@ import { GenresTag } from '../../GenresTag';
 import Marquee from 'react-fast-marquee';
 
 const PlayerV2Styles = styled.div`
-  width: 240px;
+  width: 100%;
+  height: 100%;
   background-color: #1b2326;
   border-radius: 8px;
   padding: 10px;
@@ -171,19 +172,19 @@ export const PlayerV2 = () => {
         <div className="track-infos">
           <ChevronRightIcon />
           <div className="track-infos__text">
-          <Marquee
+            <Marquee
               speed={15}
               pauseOnHover={true}
               gradient={true}
               gradientColor={[27, 35, 38]}
               gradientWidth={10}
             >
-            <span className="track-infos__text__title">Decrescendo</span>
-            <span>/</span>
-            <span className="track-infos__text__artist">Lomepal</span>
-            <span>/</span>
-            <span className="track-infos__text__album">Mauvais ordre</span>
-          </Marquee>
+              <span className="track-infos__text__title">Decrescendo</span>
+              <span>/</span>
+              <span className="track-infos__text__artist">Lomepal</span>
+              <span>/</span>
+              <span className="track-infos__text__album">Mauvais ordre</span>
+            </Marquee>
           </div>
         </div>
         <div className="leftovers">
@@ -198,4 +199,4 @@ export const PlayerV2 = () => {
       </div>
     </PlayerV2Styles>
   );
-}; 
+};

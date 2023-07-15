@@ -1,7 +1,6 @@
 'use client';
 
-import { Links } from '@/components/v2/Sidebar/Links';
-import { PlayerV2 } from '@/components/v2/Sidebar/Player/Player';
+import NewSidebar from '@/components/v2/Sidebar/NewSidebar';
 import { ReactNode } from 'react';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 
@@ -30,13 +29,10 @@ export const V2 = ({
         storage={storage}
       >
         <Panel minSize={10} defaultSize={defaultLayout[0]} id="left-panel">
-          <div className="left flex flex-col gap-[0.3rem] h-full">
-            <PlayerV2 />
-            <Links />
-          </div>
+          <NewSidebar />
         </Panel>
         <PanelResizeHandle id="resize-handle">
-          <div className="h-full w-4 "></div>
+          <div className="h-full w-1 hover:bg-purple-600"></div>
         </PanelResizeHandle>
         <Panel minSize={50} defaultSize={defaultLayout[1]} id="right-panel">
           <div className="right px-[20px] py-[40px] bg-[#1b2326] flex-1 rounded-[10px] h-full">

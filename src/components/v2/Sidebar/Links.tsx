@@ -10,7 +10,8 @@ import styled from '@emotion/styled';
 
 const LinksStyles = styled.div`
   background-color: #1b2326;
-  width: 240px;
+  width: 100%;
+  height: 100%;
   padding: 10px;
   border-radius: 8px;
   color: white;
